@@ -1,1 +1,1 @@
-<?php header("Access-Control-Allow-Origin: index.html"); ?>
+<?php header("index.html"); ?>
