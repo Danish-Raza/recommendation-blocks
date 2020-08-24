@@ -1,0 +1,12 @@
+#gameopedia-recommendation-block {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    background-color: lightblue;
+}
+#gameopedia-recommendation-block .card {
+    height: 250px;
+    width: 200px;
+    margin: 10px;
+    background-color: grey;
+}
