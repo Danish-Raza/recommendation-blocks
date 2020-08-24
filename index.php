@@ -1,1 +1,0 @@
-<?php include_once("Access-Control-Allow-Origin: index.html"); ?>
