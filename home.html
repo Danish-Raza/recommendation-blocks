@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/index.css">
 </head>
 
-<body>
+<body onload="loadHandler()">
     <!-- <section id="gameopedia-recommendation-block" style="height: 420px;">
         <div class="banner-card"></div>
     </section>
@@ -20,25 +20,29 @@
         <div class="card"></div>
     </section> -->
     <section style="width: 100%;">
-            <div class="slider">
-                <div class="slides">
-                    <div class="card" id="slide-1">1</div>
-                    <div class="card" id="slide-2">2</div>
-                    <div class="card" id="slide-3">3</div>
-                    <div class="card" id="slide-4">4</div>
-                    <div class="card" id="slide-5">5</div>
-                    <div class="card" id="slide-6">6</div>
-                    <div class="card" id="slide-7">7</div>
-                    <div class="card" id="slide-8">8</div>
-                    <div class="card" id="slide-9">9</div>
-                </div>
+        <div class="slider">
+            <span class="left-arrow">&#8592;</span>
+            <div class="slides">
+                <div class="card" id="slide-1">1</div>
+                <div class="card" id="slide-2">2</div>
+                <div class="card" id="slide-3">3</div>
+                <div class="card" id="slide-4">4</div>
+                <div class="card" id="slide-5">5</div>
+                <div class="card" id="slide-6">6</div>
+                <div class="card" id="slide-7">7</div>
+                <div class="card" id="slide-8">8</div>
+                <div class="card" id="slide-9">9</div>
             </div>
-            <div style="display: flex;width: 100%; justify-content: center;">
-                    <a href="#slide-1"></a>
-                    <a href="#slide-5"></a>
-                    <a href="#slide-9"></a>
-            </div>
+            <span class="right-arrow">&#8594;</span>
+        </div>
+        <div style="display: flex;width: 100%; justify-content: center;">
+            <a href="#slide-1" data-carousel-status="active"></a>
+            <a href="#slide-6"></a>
+            <a href="#slide-9"></a>
+        </div>
     </section>
+    <script src="js/custom.js"></script>
 </body>
+
 
 </html>

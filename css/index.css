@@ -22,18 +22,48 @@
   }
   
   .slider {
-    width: 570px;
+    width: 100%;
+    display: flex;
     /* width: 90%; */
     text-align: center;
     overflow: hidden;
   }
+  .left-arrow {
+        display: flex;
+        align-items: center;
+        font-size: 35px;
+        margin-top: auto;
+        height: 30px;
+        margin-bottom: auto;
+        background: #B0B3C4;
+        color: white;
+        padding-bottom: 12px;
+        margin-left:10px ;
+        margin-right: 10px;
+        border-radius: 7px;
+        cursor: pointer;
+  }
+  .right-arrow {
+        display: flex;
+        align-items: center;
+        font-size: 35px;
+        margin-top: auto;
+        height: 30px;
+        padding-bottom: 12px;
+        margin-bottom: auto;
+        background: #B0B3C4;
+        margin-left:10px ;
+        color: white;
+        border-radius: 7px;
+        margin-right: 10px;
+        cursor: pointer;
+  }
+
   
   .slides {
     display: flex;
     overflow-x: auto;
     justify-content: left;
-    scroll-snap-type: x mandatory;
-    scroll-snap-align: start;
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
   }
@@ -66,31 +96,29 @@
     font-size: 100px;
   }
   
-  img {
+  /* img {
     object-fit: cover;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-  }
+  } */
   
   a {
     display: inline-flex;
-    width: 1rem;
-    height: 1rem;
+    width: 10px;
+    height: 10px;
     background: white;
     text-decoration: none;
     align-items: center;
     justify-content: center;
-    border-radius: 50%;
-    margin: 0 0 0.5rem 0;
-    position: relative;
+    border-radius: 5px;
     margin: 2px;
+    position: relative;
   }
-  a:active {
-    background: #000;
-    outline: none;
+  a[data-carousel-status="active"] {
+      background: black;
   }
 
   html, body {
@@ -100,10 +128,10 @@
   body {
     display: flex;
     align-items: center;
-    justify-content: right;
+    justify-content: center;
     margin: 0;
-    padding-right: 50px;
-    padding-left: 50px;
+    padding-right: 10px;
+    padding-left: 10px;
     background: linear-gradient(to bottom, #74ABE2, #5563DE);
     background-repeat: no-repeat;
   }
