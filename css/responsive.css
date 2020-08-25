@@ -1,0 +1,40 @@
+/* Large Devices (Desktops & Laptops) */
+
+@media (min-width: 1200px) {
+    /* OK */
+}
+
+
+/* Medium Devices (Landscape Tablets & Medium Desktops) */
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  
+}
+
+
+/* Small Devices (Portrait Tablets & Small Desktops) */
+
+@media (min-width: 768px) and (max-width: 991px) {
+    /* Mobile menu */
+}
+
+
+/* Extra Small Devices (Landscape Phones & Portrait Tablets) */
+
+@media (max-width: 767px) {
+    /* Mobile menu */
+}
+
+
+/* Extra Small Devices (Portrait Phones & Smaller devices) */
+
+@media (max-width: 480px) {
+    /* OK */
+}
+
+
+/* Extra Small Devices (Portrait Phones & Smaller devices) */
+
+@media (max-width: 320px) {
+    /* Services */
+}

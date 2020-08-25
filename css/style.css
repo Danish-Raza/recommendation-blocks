@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    background: linear-gradient(to bottom, #74ABE2, #5563DE);
+    background-repeat: no-repeat;
+  }
+.owl-theme .owl-dots .owl-dot.active span {
+    background: black !important;
+}
+.owl-theme .owl-dots .owl-dot span {
+    background: lightgray !important;
+}
+.customPrevBtn {
+    font-size: 30px;
+    background: #B0B3C4;
+    border-radius: 7px;
+    color: white;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: flex-end;
+    cursor: pointer;
+    
+}
+.customNextBtn {
+    font-size: 30px;
+    float: right;
+    background: #B0B3C4;
+    border-radius: 7px;
+    color: white;
+    height: 30px;
+    align-items: flex-end;
+    display: flex;
+    cursor: pointer;
+}
+.content-box {
+    padding: 30px 0 30px 0;
+}
+
+.content-title h3 {
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 0 30px 0;
+    color: #41464b;
+}
+.card {
+    margin: 0 15px;
+}

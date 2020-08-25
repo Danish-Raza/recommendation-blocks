@@ -1,48 +1,45 @@
 <!DOCTYPE html>
-<html lang="en" style="height: 400px;">
-
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="Game, Gameopedia, recommendation blocks">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Recommendation blocks powered by Gameopedia</title>
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="css/owl-carousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl-carousel/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
-
-<body onload="loadHandler()">
-    <!-- <section id="gameopedia-recommendation-block" style="height: 420px;">
-        <div class="banner-card"></div>
-    </section>
-    <section id="gameopedia-recommendation-block" style="height: 420px;">
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-    </section> -->
-    <section style="width: 100%;">
-        <div class="slider">
-            <span class="left-arrow">&#8592;</span>
-            <div class="slides">
-                <div class="card" id="slide-1">1</div>
-                <div class="card" id="slide-2">2</div>
-                <div class="card" id="slide-3">3</div>
-                <div class="card" id="slide-4">4</div>
-                <div class="card" id="slide-5">5</div>
-                <div class="card" id="slide-6">6</div>
-                <div class="card" id="slide-7">7</div>
-                <div class="card" id="slide-8">8</div>
-                <div class="card" id="slide-9">9</div>
+<body>
+    <section id="gameopedia-recommendation-block">
+        <div class="content-box">
+            <div class="content-title ">
+                <h3 style="text-align: center;"> Recommendations </h3>
             </div>
-            <span class="right-arrow">&#8594;</span>
-        </div>
-        <div style="display: flex;width: 100%; justify-content: center;">
-            <a href="#slide-1" data-carousel-status="active"></a>
-            <a href="#slide-6"></a>
-            <a href="#slide-9"></a>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                            <span class="customNextBtn">&#8594;</span>
+                            <span class="customPrevBtn">&#8592;</span>
+                        <div id="card-container" class="owl-carousel owl-theme">
+                            <div class="card img-responsive" style="background: gray; height: 350px;"></div>
+                            <div class="card img-responsive" style="background: gray; height: 350px;"></div>
+                            <div class="card img-responsive" style="background: gray; height: 350px;"></div>
+                            <div class="card img-responsive" style="background: gray; height: 350px;"></div>
+                            <div class="card img-responsive" style="background: gray; height: 350px;"></div>
+                            <div class="card img-responsive" style="background: gray; height: 350px;"></div>
+                            <div class="card img-responsive" style="background: gray; height: 350px;"></div>
+                            <div class="card img-responsive" style="background: gray; height: 350px;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <script src="js/owl-carousel/owl.carousel.min.js"></script>
     <script src="js/custom.js"></script>
 </body>
-
-
 </html>

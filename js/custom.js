@@ -1,24 +1,31 @@
-function loadHandler() {
-    var slides = document.querySelector(".slides")
-    var cardThresholdNo = 4;
-    var cardLength = 270;
-    document.querySelector(".right-arrow").addEventListener("click",function() {
-            slides.scrollLeft+= cardLength * cardThresholdNo;
+$(function () {
+    var cardHeight = 350
+    var owl = $('.owl-carousel');
+    $("#card-container").owlCarousel({
+        items: 4,
+        //nav:true,
+		responsive: {
+		  0: {
+			items: 1
+		  },
+		  480: {
+			items: 2
+		  },
+		  768: {
+			items: 3
+          },
+          1200: {
+            items: 4
+          }
+		}
     });
-    document.querySelector(".left-arrow").addEventListener("click",function() {
-            slides.scrollLeft+= -cardLength * cardThresholdNo;
-    });
-}
-
-function carouselHandler(element) {
-    let activeCarousel =  document.querySelector('[data-carousel-status="active"]');
-    if(activeCarousel) {
-        activeCarousel.setAttribute("data-carousel-status","in-active");
-    }
-    element.setAttribute("data-carousel-status","active");
-    let href = element.getAttribute("href");
-    if(href) {
-        href = href.substring(1);
-        document.getElementById(href).scrollLeft = 0;
-    }
-}
+    owl.owlCarousel();
+    $('.customNextBtn').click(function() {
+        owl.trigger('next.owl.carousel');
+    })
+    $('.customPrevBtn').click(function() {
+        owl.trigger('prev.owl.carousel', [300,4]);
+    })
+    $('.customNextBtn').css({position:"relative",top:`${cardHeight/2}px`, left: "30px"});
+    $('.customPrevBtn').css({position:"relative",top:`${cardHeight/2}px`, right: "30px"});
+});
