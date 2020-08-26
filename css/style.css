@@ -10,26 +10,27 @@ body {
     background: lightgray !important;
 }
 .customPrevBtn {
-    font-size: 30px;
+    /* font-size: 30px; */
     background: #B0B3C4;
     border-radius: 7px;
     color: white;
     height: 30px;
     width: 30px;
-    display: flex;
-    align-items: flex-end;
+    /* display: flex;
+    align-items: flex-end; */
     cursor: pointer;
     
 }
 .customNextBtn {
-    font-size: 30px;
+    /* font-size: 30px; */
     float: right;
     background: #B0B3C4;
     border-radius: 7px;
     color: white;
     height: 30px;
-    align-items: flex-end;
-    display: flex;
+    width: 30px;
+    /* align-items: flex-end;
+    display: flex; */
     cursor: pointer;
 }
 .content-box {
