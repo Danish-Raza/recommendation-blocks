@@ -35,9 +35,9 @@
     .customPrevBtn, .customNextBtn{
         display: none !important;
     }
-    .card {
+    /* .card {
         min-height: 420px !important;
-    }
+    } */
     /* OK */
 }
 
