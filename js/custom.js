@@ -158,8 +158,7 @@ var data = {
       "product_id": "VGSPS4-3.2",
       "title": "Days Gone: Collector’s Edition"
     }
-  ]
-
+  ],
 }
 $(function () {
   var gameopediaRecommendationBlock = document.getElementById("gameopedia-recommendation-block");
