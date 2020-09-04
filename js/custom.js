@@ -3,7 +3,7 @@ var blockData = {
     {
       "discount": "",
       "handle": "my-time-at-portia-xb1",
-      "clip":"assets/sample.mp4",
+      "clip":"assets/sample2.webm",
       "img_src": "https://cdn.shopify.com/s/files/1/0280/6457/9655/products/My_Time_at_Portia_Xb1_Cov.jpg?v=1592981794",
       "price": "$5.00",
       "product_id": 454591,
@@ -26,7 +26,7 @@ var blockData = {
       "img_src": "https://cdn.shopify.com/s/files/1/0280/6457/9655/products/Atelier_Lulua_The_Scion_of_Arland_ps4_win_ns_deluxe_cov_601d6f28-39b5-4f7d-8738-c085b3560765.jpg?v=1592984407",
       "product_id": 681153,
       "price": "$15.00",
-      "clip":"assets/sample.mp4",
+      "clip":"assets/sample2.webm",
       "title": "Atelier Lulua: The Scion of Arland - Digital Deluxe Edition"
     },
     {
@@ -34,7 +34,7 @@ var blockData = {
       "handle": "bless-online-win",
       "img_src": "https://cdn.shopify.com/s/files/1/0280/6457/9655/products/BLESS_ONLINE_win_cov.jpg?v=1592984940",
       "price": "$5.00",
-      "clip":"assets/sample.mp4",
+       "clip":"assets/sample3.webm",
       "product_id": 200504,
       "title": "BLESS ONLINE"
     },
@@ -44,7 +44,7 @@ var blockData = {
       "img_src": "https://cdn.shopify.com/s/files/1/0280/6457/9655/products/Atelier_Lulua_The_Scion_of_Arland_ps4_win_ns_deluxe_cov_601d6f28-39b5-4f7d-8738-c085b3560765.jpg?v=1592984407",
       "price": "$20.00",
       "product_id": 681155,
-      "clip":"assets/sample.mp4",
+      "clip":"assets/sample2.webm",
       "title": "Atelier Lulua: The Scion of Arland - Digital Deluxe Edition"
     },
     {
@@ -174,7 +174,7 @@ var blockData = {
       "price": "$5.00",
       "product_id": 4545919,
       "short_text":"lorem ipsum",
-      "clip":"assets/sample.mp4",
+      "clip":"assets/sample2.webm",
       "long_text":"Shoot enemies and gather amazing loot to upgrade and customize your character as you see fit.",
       "title": "My Time at Portia"
     },
