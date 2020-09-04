@@ -442,6 +442,7 @@ body {
 .template-4 .add-to-cart {
     font-weight: bold;
     width: 67px;
+    min-width: 67px;
     height: 57PX;
     background: #236AAE;
     color: white;
@@ -452,8 +453,7 @@ body {
     align-items: center;
     cursor: pointer;
     margin: auto 0;
-    margin-left: 35px;
-    
+    margin-left: 35px;   
 }
 
 /* Styling Checkbox Starts */
