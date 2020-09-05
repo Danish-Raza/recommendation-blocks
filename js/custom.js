@@ -2,6 +2,7 @@ var blockData = {
   "Other Role-Playing Games": [
     {
       "discount": "",
+      "product_page":"https://www.amazon.in/b?ie=UTF8&node=21345254031",
       "handle": "my-time-at-portia-xb1",
       "clip":"assets/sample2.webm",
       "img_src": "https://cdn.shopify.com/s/files/1/0280/6457/9655/products/My_Time_at_Portia_Xb1_Cov.jpg?v=1592981794",
@@ -14,6 +15,7 @@ var blockData = {
     {
       "discount": "",
       "handle": "ni-no-kuni-2-digital-princes-edition-win",
+      "product_page":"https://www.amazon.in/b?ie=UTF8&node=21345254031",
       "clip":"assets/sample.mp4",
       "img_src": "https://cdn.shopify.com/s/files/1/0280/6457/9655/products/Ni_no_Kuni_II_win_prince_cov.png?v=1592984299",
       "product_id": 289742,
@@ -23,6 +25,7 @@ var blockData = {
     {
       "discount": "",
       "handle": "atelier-lulua-the-scion-of-arland-digital-deluxe-edition-win",
+      "product_page":"https://www.amazon.in/b?ie=UTF8&node=21345254031",
       "img_src": "https://cdn.shopify.com/s/files/1/0280/6457/9655/products/Atelier_Lulua_The_Scion_of_Arland_ps4_win_ns_deluxe_cov_601d6f28-39b5-4f7d-8738-c085b3560765.jpg?v=1592984407",
       "product_id": 681153,
       "price": "$15.00",
@@ -33,6 +36,7 @@ var blockData = {
       "discount": "",
       "handle": "bless-online-win",
       "img_src": "https://cdn.shopify.com/s/files/1/0280/6457/9655/products/BLESS_ONLINE_win_cov.jpg?v=1592984940",
+      "product_page":"https://www.amazon.in/b?ie=UTF8&node=21345254031",
       "price": "$5.00",
        "clip":"assets/sample3.webm",
       "product_id": 200504,
@@ -45,6 +49,7 @@ var blockData = {
       "price": "$20.00",
       "product_id": 681155,
       "clip":"assets/sample2.webm",
+      "product_page":"https://www.amazon.in/b?ie=UTF8&node=21345254031",
       "title": "Atelier Lulua: The Scion of Arland - Digital Deluxe Edition"
     },
     {
@@ -54,6 +59,7 @@ var blockData = {
       "price": "$5.00",
       "product_id": 200506,
       "clip":"assets/sample.mp4",
+      "product_page":"https://www.amazon.in/b?ie=UTF8&node=21345254031",
       "title": "BLESS ONLINE"
     }
   ],
@@ -64,6 +70,7 @@ var blockData = {
       "img_src": "https://cdn.shopify.com/s/files/1/0280/6457/9655/products/game_cover_688d87af2ef876214d649b588469b7af.jpg?v=1592985340",
       "price": "$5.00",
       "product_id": "VGSXB1-1397",
+      "product_page":"https://www.amazon.in/b?ie=UTF8&node=21345254031",
       "short_text":"lorem ipsum",
       "long_text":"Shoot enemies and gather amazing loot to upgrade and customize your character as you see fit.",
       "title": "Agents of Mayhem"
@@ -75,6 +82,7 @@ var blockData = {
       "price": "",
       "product_id": "VGSPS4-3.18",
       "short_text":"lorem ipsum",
+      "product_page":"https://www.amazon.in/b?ie=UTF8&node=21345254031",
       "long_text":"Shoot enemies and gather amazing loot to upgrade and customize your character as you see fit.",
       "title": "Days Gone: Digital Deluxe Edition"
     },
@@ -84,6 +92,7 @@ var blockData = {
       "img_src": "https://cdn.shopify.com/s/files/1/0280/6457/9655/products/Ace_Combat_7_PS4_Cov.png?v=1592981616",
       "price": "$10.00",
       "product_id": "VGSPS4-69",
+      "product_page":"https://www.amazon.in/b?ie=UTF8&node=21345254031",
       "title": "Ace Combat 7: Skies Unknown"
     },
     {
@@ -92,6 +101,7 @@ var blockData = {
       "img_src": "https://cdn.shopify.com/s/files/1/0280/6457/9655/products/Days_Gone_CE_PS4_Cov.jpg?v=1592981533",
       "price": "$5.00",
       "product_id": "VGSPS4-3.210",
+      "product_page":"https://www.amazon.in/b?ie=UTF8&node=21345254031",
       "title": "Days Gone: Collector’s Edition"
     },
     {
@@ -100,6 +110,7 @@ var blockData = {
       "img_src": "https://cdn.shopify.com/s/files/1/0280/6457/9655/products/game_cover_688d87af2ef876214d649b588469b7af.jpg?v=1592985340",
       "price": "$5.00",
       "product_id": "VGSXB1-13911",
+      "product_page":"https://www.amazon.in/b?ie=UTF8&node=21345254031",
       "title": "Agents of Mayhem"
     },
     {
@@ -108,6 +119,7 @@ var blockData = {
       "img_src": "https://cdn.shopify.com/s/files/1/0280/6457/9655/products/Days-Gone-Digital-Deluxe-Edition-ps4cvr.jpg?v=1592981531",
       "price": "",
       "product_id": "VGSPS4-3.112",
+      "product_page":"https://www.amazon.in/b?ie=UTF8&node=21345254031",
       "title": "Days Gone: Digital Deluxe Edition"
     },
     {
@@ -116,6 +128,7 @@ var blockData = {
       "img_src": "https://cdn.shopify.com/s/files/1/0280/6457/9655/products/Ace_Combat_7_PS4_Cov.png?v=1592981616",
       "price": "$10.00",
       "product_id": "VGSPS4-613",
+      "product_page":"https://www.amazon.in/b?ie=UTF8&node=21345254031",
       "title": "Ace Combat 7: Skies Unknown"
     },
     {
@@ -124,6 +137,7 @@ var blockData = {
       "img_src": "https://cdn.shopify.com/s/files/1/0280/6457/9655/products/Days_Gone_CE_PS4_Cov.jpg?v=1592981533",
       "price": "$5.00",
       "product_id": "VGSPS4-3.214",
+      "product_page":"https://www.amazon.in/b?ie=UTF8&node=21345254031",
       "title": "Days Gone: Collector’s Edition"
     },
     {
@@ -132,6 +146,7 @@ var blockData = {
       "img_src": "https://cdn.shopify.com/s/files/1/0280/6457/9655/products/game_cover_688d87af2ef876214d649b588469b7af.jpg?v=1592985340",
       "price": "$5.00",
       "product_id": "VGSXB1-13915",
+      "product_page":"https://www.amazon.in/b?ie=UTF8&node=21345254031",
       "title": "Agents of Mayhem"
     },
     {
@@ -140,6 +155,7 @@ var blockData = {
       "img_src": "https://cdn.shopify.com/s/files/1/0280/6457/9655/products/Days-Gone-Digital-Deluxe-Edition-ps4cvr.jpg?v=1592981531",
       "price": "",
       "product_id": "VGSPS4-3.116",
+      "product_page":"https://www.amazon.in/b?ie=UTF8&node=21345254031",
       "title": "Days Gone: Digital Deluxe Edition"
     },
     {
@@ -148,6 +164,7 @@ var blockData = {
       "img_src": "https://cdn.shopify.com/s/files/1/0280/6457/9655/products/Ace_Combat_7_PS4_Cov.png?v=1592981616",
       "price": "$10.00",
       "product_id": "VGSPS4-617",
+      "product_page":"https://www.amazon.in/b?ie=UTF8&node=21345254031",
       "title": "Ace Combat 7: Skies Unknown"
     },
     {
@@ -156,6 +173,7 @@ var blockData = {
       "img_src": "https://cdn.shopify.com/s/files/1/0280/6457/9655/products/Days_Gone_CE_PS4_Cov.jpg?v=1592981533",
       "price": "$5.00",
       "product_id": "VGSPS4-3.218",
+      "product_page":"https://www.amazon.in/b?ie=UTF8&node=21345254031",
       "title": "Days Gone: Collector’s Edition"
     }
   ],
@@ -175,6 +193,7 @@ var blockData = {
       "product_id": 4545919,
       "short_text":"lorem ipsum",
       "clip":"assets/sample2.webm",
+      "product_page":"https://www.amazon.in/b?ie=UTF8&node=21345254031",
       "long_text":"Shoot enemies and gather amazing loot to upgrade and customize your character as you see fit.",
       "title": "My Time at Portia"
     },
@@ -192,6 +211,7 @@ var blockData = {
       "product_id": 2897420,
       "short_text":"lorem ipsum",
       "clip":"assets/sample.mp4",
+      "product_page":"https://www.amazon.in/b?ie=UTF8&node=21345254031",
       "long_text":"Shoot enemies and gather amazing loot to upgrade and customize your character as you see fit.",
       "title": "Ni no Kuni II: Revenant Kingdom - Digital Prince's Edition"
     }
@@ -200,32 +220,38 @@ var blockData = {
     {
       "discount": "",
       "handle": "my-time-at-portia-xb1",
-      "clip":"",
+      "clip":"assets/sample2.webm",
       "img_src": "https://cdn.shopify.com/s/files/1/0280/6457/9655/products/My_Time_at_Portia_Xb1_Cov.jpg?v=1592981794",
       "price": "$5.00",
-      "product_id": 45459133,
+      "product_id": 4545913399,
       "short_text":"lorem ipsum",
+      "product_page":"https://www.amazon.in/b?ie=UTF8&node=21345254031",
       "long_text":"Shoot enemies and gather amazing loot to upgrade and customize your character as you see fit.",
       "title": "My Time at Portia"
     },
     {
-      "discount": "",
-      "handle": "ni-no-kuni-2-digital-princes-edition-win",
-      "clip":"https://vod-progressive.akamaized.net/exp=1599041105~acl=%2A%2F403092428.mp4%2A~hmac=5391b27096f7cd00d736a7d7e4999a760e2fc44e0284cfd0031a24ad0534ba4c/vimeo-prod-skyfire-std-us/01/2219/5/136097569/403092428.mp4?filename=Car+Racing+-+371.mp4",
-      "img_src": "https://cdn.shopify.com/s/files/1/0280/6457/9655/products/Ni_no_Kuni_II_win_prince_cov.png?v=1592984299",
-      "product_id": 28974224,
-      "price": "$10.00",
-      "title": "Ni no Kuni II: Revenant Kingdom - Digital Prince's Edition"
+      "discount": "5%",
+      "handle": "days-gone-collectors-edition-ps4",
+      "img_src": "https://cdn.shopify.com/s/files/1/0280/6457/9655/products/Days_Gone_CE_PS4_Cov.jpg?v=1592981533",
+      "price": "$5.00",
+      "product_id": "VGSPS9943.210",
+      "short_text":"lorem ipsum",
+      "clip":"assets/sample2.webm",
+      "product_page":"https://www.amazon.in/b?ie=UTF8&node=21345254031",
+      "long_text":"Shoot enemies and gather amazing loot to upgrade and customize your character as you see fit.",
+      "title": "Days Gone: Collector’s Edition"
     },
     {
       "discount": "",
-      "handle": "atelier-lulua-the-scion-of-arland-digital-deluxe-edition-win",
-      "img_src": "https://cdn.shopify.com/s/files/1/0280/6457/9655/products/Atelier_Lulua_The_Scion_of_Arland_ps4_win_ns_deluxe_cov_601d6f28-39b5-4f7d-8738-c085b3560765.jpg?v=1592984407",
-      "product_id": 68115325,
-      "price": "$15.00",
-      "clip":"",
-      "title": "Atelier Lulua: The Scion of Arland - Digital Deluxe Edition"
-    }
+      "handle": "bless-online-win",
+      "img_src": "https://cdn.shopify.com/s/files/1/0280/6457/9655/products/BLESS_ONLINE_win_cov.jpg?v=1592984940",
+      "price": "$5.00",
+      "product_id": 200500904,
+      "clip":"assets/sample2.webm",
+      "product_page":"https://www.amazon.in/b?ie=UTF8&node=21345254031",
+      "long_text":"Shoot enemies and gather amazing loot to upgrade and customize your character as you see fit.",
+      "title": "BLESS ONLINE"
+    },
   ]
 }
 const cardConfig = {
@@ -296,14 +322,27 @@ const paginationHandler = () => {
   });
 }
 
+const addToCartHandler = (productId, containerIndex, order) => {
+  let rcBlock = document.querySelector(`[data-container-index="${containerIndex}"]`);
+  let selectedProduct = "";
+  if(order=="single") {
+    selectedProduct = productId;
+  } else if(order=="multi") {
+    selectedProduct = [];
+    rcBlock.querySelectorAll("input:checked").forEach(element => {
+      selectedProduct.push(element.value)
+    });
+  }
+}
+
 window.onload = () => {
   var gameopediaRecommendationBlock = document.getElementById("gameopedia-recommendation-block");
   var index = 0;
   for (var recBlock in blockData) {
     index++;
-    let template = `template-${index}`
+    let template = `template-${index}`;
     let noOfCards = blockData[recBlock].length;
-    let block = recomendationBlock(blockData[recBlock], index, recBlock, template, noOfCards);
+    let block = getRcBlocks(blockData[recBlock], index, recBlock, template, noOfCards);
     gameopediaRecommendationBlock.innerHTML += block;
   }
   paginationHandler()
@@ -311,124 +350,157 @@ window.onload = () => {
 
 window.onresize = paginationHandler;
 
-const playVideo = (video) => {
-  video.play();
-}
-
-const pauseVideo = (video) => {
-  video.load();
-}
-
-const addToCardHandler = (productId,order) => {
-  if(order=="single") {
-
-  } else if(order=="multi") {
-
+const playVideo = (video,template,card) => {
+  let parentElement = card.parentNode; 
+  if(video.paused == false) {
+    video.style.transform = "scale(1.2)";
+    video.style["-webkit-transform"] = "scale(1.2)";
+    video.style["--ms-transform"] = "scale(1.2)";
+  }
+  if(template == "template-1") {
+    video.style.width = "270px";
+    parentElement.querySelector(".card-footer").style.left = "185px";
+  } else if(template == "template-4") {
+    video.style.width = "270px";
+    parentElement.querySelector(".card-footer").style.left = "201px";
+  }
+  if(!video.src.includes("null")) {
+    video.play();
   }
 }
 
-const recomendationBlock = (recData, index, recBlock, template, noOfCards) => {
+const pauseVideo = (video,template,card) => {
+  if(template == "template-1" || template == "template-4") {
+    video.load()
+    video.style.width = "120px";
+    video.style.transform = "scale(1.0)";
+    video.style["-webkit-transform"] = "scale(1.0)"; 
+    video.style["--ms-transform"] = "scale(1.0)";
+    if(template=="template-1") {
+      card.querySelector(".card-footer").style.left="120px";
+    } else {
+      card.querySelector(".card-footer").style.left="135px";
+    }
+  } else if(template == "template-3") {
+    video.pause();
+  }
+}
+
+const screenShotsHandler = (selectedUrl, videoElement, order, element) => {
+  if(order=="image") {
+    videoElement.poster = selectedUrl;
+    videoElement.load();
+    videoElement.src="";
+    videoElement.style.transform = "scale(1.0)";
+    videoElement.style["-webkit-transform"] = "scale(1.0)"; 
+    videoElement.style["--ms-transform"] = "scale(1.0)";
+  } else if(order=="video") {
+    videoElement.src = selectedUrl; 
+    videoElement.style.transform = "scale(1.2)";
+    videoElement.style["-webkit-transform"] = "scale(1.2)";
+    videoElement.style["--ms-transform"] = "scale(1.2)";
+    videoElement.play();
+  }
+
+}
+
+const getRcBlocks = (recData, index, recBlock, template, noOfCards) => {
   let cards = ""
-  if (index == 1) {
-    recData.forEach((record,index) => {
-      cards+= `<div class="card">
+  if(template == "template-1") {
+    recData.forEach((record,cardIndex) => {
+      cards+= `<div class="card"  onmouseleave="pauseVideo(bgvid${record.product_id},'${template}',this)">
       <div class="card-body"> 
-        <video poster="${record.img_src}" id="bgvid${record.product_id}" playsinline muted loop  onmouseover="playVideo(bgvid${record.product_id})" onmouseleave="pauseVideo(bgvid${record.product_id})">
+        <video poster="${record.img_src}" id="bgvid${record.product_id}" playsinline muted loop  onmouseover="playVideo(bgvid${record.product_id},'${template}',this)">
           <source src="${record.clip}">
-        </video>  
+        </video> 
         <div class="card-footer">
           ${record.price ? `<div class="price">${record.price}</div>`: ""}
-          <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-        </div>
+          <i class="fa fa-shopping-cart" aria-hidden="true" onclick="addToCartHandler('${record.product_id}',${cardIndex},'single')"></i>
+        </div> 
       </div>
       <div class="card-header">
-        <div class="title">${record.title ? record.title : ""}</div>
+      <a class="title" href="${record.product_page}" target=_blank>${record.title ? record.title : ""}</a>
         <div class="short-text">${record.short_text ? record.short_text : ""}</div>
         <div class="long-text">${record.long_text ? record.long_text : ""}</div>
       </div>
     </div>`
     });
-  } else if (index == 2) {
-    recData.forEach((record, index) => {
+  } else if(template == "template-2") {
+    recData.forEach((record, cardIndex) => {
       cards += `<div class="card-wrapper">
       <div class="card-body">
         <div class="card-footer">
           <div class="long-text" style="color:white;text-align:center;padding:5px">${record.long_text ? record.long_text : ""}</div>
           <div style="display:flex;justify-content: center; width: 120px">
           <div class="price" style="color:#F8E71C">${record.price ? record.price :""}</div>
-          <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+          <i class="fa fa-shopping-cart" aria-hidden="true"  onclick="addToCartHandler('${record.product_id}',${cardIndex},'single')"></i>
           </div>
         </div>
       </div>
       <div class="card">
         <div class="box-art" style="background-image: url(${record.img_src});"></div>
       </div>
+      <a class="title" href="${record.product_page}" target=_blank>${record.title ? record.title : ""}</a>
       <div class="short-text">${record.short_text ? record.short_text : ""}</div>
-      <div class="title">${record.title}</div>
       </div>`
     });
-  } else if(index == 3) {
+  } else if(template == "template-3") {
     //  <i class="fa fa-chevron-left" aria-hidden="true" style="color:#E1A3A4"></i>
    // <i class="fa fa-chevron-right" aria-hidden="true" style="color:#E1A3A4"></i>
-    recData.forEach((record, index) => {
-      let screenshots = "";
+    recData.forEach((record, cardIndex) => {
+      let screenshots = `<div class="box-art" style="background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgb(143, 139, 136)), url(${record.img_src});color:white;display:flex;justify-content:center;align-item:center;cursor:pointer" onclick="screenShotsHandler('${record.clip}',bgvid${record.product_id},'video',this)"><i class="fa fa-play"></i></div>`;
       record.screenshots.forEach(element => {
-        screenshots+= ` <div class="box-art" style="background-image: url(${element});"></div>`
+        screenshots+= `<div class="box-art" style="background-image: url(${element});" onclick="screenShotsHandler('${element}',bgvid${record.product_id},'image',this)"></div>`
       }); 
-      cards += `<div class="card-wrapper" onmouseover="playVideo(bgvid${record.product_id})" onmouseleave="pauseVideo(bgvid${record.product_id})" >
+      cards += `<div class="card-wrapper" onmouseover="playVideo(bgvid${record.product_id},'${template}',this)" onmouseleave="pauseVideo(bgvid${record.product_id},'${template}'),this" >
       <canvas class="canvas"></canvas>
       <div class="card-body">
         <div class="card-header">
           <div class="box-art" style="background-image: url(${record.img_src});"></div>
-          <div class="title">${record.title ? record.title : ""}</div>
+          <a class="title" href="${record.product_page}" target=_blank>${record.title ? record.title : ""}</a>
           <div class="short-text">${record.short_text ? record.short_text : ""}</div>
           <div class="long-text">${record.long_text ? record.long_text : ""}</div>
         </div>
         <div class="card-footer">
-          <div class="add-to-cart"><i class="fa fa-shopping-cart" aria-hidden="true" style="margin-right:5px;font-size:17px"></i></div> 
+          <div class="add-to-cart"><i class="fa fa-shopping-cart" aria-hidden="true" style="margin-right:5px;font-size:17px"  onclick="addToCartHandler('${record.product_id}',${cardIndex},'single')"></i></div> 
           ${record.price ? `<div class="right-section">${record.on_sale ?"<div class='on-sale'>ON SALE</div>" : ""}<div class="price">${record.price}</div></div>`: ""}
           ${screenshots != "" ? `<div class="screenshots-wrapper">
-         
           <div class="screenshots">
             ${screenshots}
           </div>
-        
           </div> `: ""}
         </div>
       </div>
       <div class="card">
-        <video poster="${record.img_src}" id="bgvid${record.product_id}" playsinline muted loop>
-          <source src="${record.clip}">
+        <video poster="${record.img_src}" src="${record.clip}" id="bgvid${record.product_id}" playsinline muted loop>
         </video>
       </div>
       </div>`
     });
-  } else if(index == 4) {
-    recData.forEach((record, index) => {
-      cards += `<div class="card-wrapper">
-      <div class="card-body">
+  } else if(template == "template-4") {
+    recData.forEach((record, cardIndex) => {
+    cards+= `<div class="card"  onmouseleave="pauseVideo(bgvid${record.product_id},'${template}',this)">
+      <div class="card-body"> 
+        <video poster="${record.img_src}" id="bgvid${record.product_id}" playsinline muted loop  onmouseover="playVideo(bgvid${record.product_id},'${template}',this)">
+          <source src="${record.clip}">
+        </video> 
         <div class="card-footer">
-          <div class="long-text" style="color:white;text-align:center;padding:5px">${record.long_text ? record.long_text : ""}</div>
-          <div style="display:flex;justify-content: center; width: 120px">
-          </div>
+          <label class="checkbox-label">
+              <input type="checkbox" checked value=${record.product_id}>
+              <span class="checkbox-custom rectangular"></span>
+          </label>
+          <div class="price">${record.price ? record.price :""}</div>
         </div>
       </div>
-      <div class="card">
-        <div class="box-art" style="background-image: url(${record.img_src});"></div>
+      <div class="card-header">
+        <a class="title" href="${record.product_page}" target=_blank>${record.title ? record.title : ""}</a>
+        <div class="short-text">${record.short_text ? record.short_text : ""}</div>
+        <div class="long-text">${record.long_text ? record.long_text : ""}</div>
       </div>
-      <div class="short-text">${record.short_text ? record.short_text : ""}</div>
-      <div class="title">${record.title}</div>
-      <div class="checkbox-container">
-        <label class="checkbox-label">
-            <input type="checkbox" checked value=${record.product_id}>
-            <span class="checkbox-custom rectangular"></span>
-        </label>
-        <div class="price">${record.price ? record.price :""}</div>
-      </div>
-      </div>
-      ${index != recData.length-1 ? '<div style="display:flex;align-items:center;font-weight:bold">+</div>' : ""}`
+    </div>
+    ${cardIndex == 0 ? '<div style="display:flex;align-items:center;font-weight:bold;font-size:27px">+</div>' : ""}`
     });
-    cards+='<div class="add-to-cart">ADD TO CART</div>'
+    cards+=`<div class="add-to-cart" onclick="addToCartHandler(null,${index},'multi')">ADD TO CART</div>`
   }
   return (
     `<div class="content-box ${template}" data-template="${template}" data-no-of-cards="${noOfCards}">

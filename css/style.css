@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    padding: 0;
     background-repeat: no-repeat;
     font-family: Montserrat;
 }
@@ -62,51 +63,65 @@ body {
 .pagination .active {
     color: black;
 }
-.template-1 .card {
+.template-1 .card, .template-4 .card {
     margin: 0 15px;
     display: flex;
     height: 140px;
     background: white;
     width: 100%;
     position: relative;
-    /* width: 266px; */
+    overflow: hidden;
     min-width: 266px !important;
     max-width: 266px !important;
 }
-.template-1 .card .card-body {
-    width: 100%;
+.template-1 .card .card-body, .template-4 .card .card-body {
+    width: 50%;
     display: flex;
-    position: absolute;
-    left: 0;
+    align-items: flex-end;
     height: 100%;
     z-index: 1;
 }
-.template-1 .card .card-header {
+.template-1 .card .card-header, .template-4 .card .card-header {
     z-index: 0;
     width: 50%;
-    margin-left: 49%
+    height: 92%;
+    top:0px;
+    position: absolute;
+    right: 0;
 }
-.template-1  video {
+.template-1  video, .template-4  video {
     width: 120px;
     height: 140px;
     object-fit: cover;
     object-position: center;
+    transition: width 0.3s;
+    -webkit-transition:width 0.3s;;
+    -moz-transition:width 0.3s;;
+    -ms-transition:width 0.3s;;
+    -o-transition:width 0.3s;;
+}
+.template-1 .card-footer,.template-4 .card-footer {
+    display: flex;
+    position: absolute;
+    bottom: 1px;
+    left: 120px;
     transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
 }
-.template-1 .card:hover video:hover {
-   display: block;
-   width: 100%;
-   z-index: 1;
+
+.template-1 .card-body:hover +.card-header, .template-4 .card-body:hover +.card-header {
+    position: absolute;
+    right: 0;
+}
+
+.template-1 .card-body:hover .card-footer, .template-4 .card-body:hover .card-footer {
    transition: all 0.3s;
 }
-.template-1 .card:hover video:hover +.card-footer{
-   left: 185px;
-   transition: all 0.3s;
-}
-.template-1 .card-footer:hover +video {
-    width: 100%
-}
-.template-1 .card .box-art {
+
+.template-1 .card .box-art, .template-4 .card .box-art {
     width: 120px;
     height: 140px;
     background-size: cover;
@@ -114,29 +129,23 @@ body {
     background-position: center;
     transition: all 0.3s;
 }
-.template-1 .title {
+.template-1 .title, .template-4 .title {
     font-size: 12px;
     font-weight: bold;
     color: #236AAE;
+    display: block;
+    text-decoration: none;
 }
-.template-1 .short-text {
+.template-1 .short-text, .template-4 .short-text {
     font-size: 11px;
     font-weight: 600;
     color: #4A4A4A;
     margin: 5px 0;
 }
-.template-1 .long-text {
+.template-1 .long-text, .template-4 .long-text {
     font-size:  11px;
     font-weight: 400;
     color: #4A4A4A;
-}
-.template-1 .card-footer {
-    position: absolute;
-    display: flex;
-    z-index: 1;
-    left: 120px;
-    bottom: 0;
-    transition: all 0.3s;
 }
 .template-1 .card-footer .price {
     font-size: 12px;
@@ -172,16 +181,61 @@ body {
     height: 20px;
     border-radius: 2px;
 }
+.template-4 .card-footer .price {
+    font-size: 12px;
+    font-weight: 600;
+    color: #79000F;
+    background: white;
+    width: 53px;
+    height: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.template-4 .card-footer {
+    display: flex;
+    position: absolute;
+    bottom: 1px;
+    left: 135px;
+    transition: all 0.3s;
+}
+.template-4 .add-to-cart {
+    font-weight: bold;
+    width: 67px;
+    min-width: 67px;
+    height: 57PX;
+    background: #236AAE;
+    color: white;
+    border-radius: 3px;
+    font-size: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin: auto 0;
+    margin-left: 35px;   
+}
 .template-2 .card {
     display: flex;
     height: 140px;
     background: white;
     position: relative;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
 }
 .template-2 .card-wrapper {
     position: relative;
     margin: 0 15px;
     width: 120px;
+    text-align: center;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
 }
 .template-3 .card-wrapper {
     position: relative;
@@ -192,10 +246,19 @@ body {
 }
 .template-2 .card:hover, .template-2 .card-wrapper .card-body:hover +.card{
     filter:  brightness(0.35);
+    transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
 }
 .template-2 .card-wrapper:hover .card {
     filter:  brightness(0.35);
-
+    transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
 }
 .template-2 .card-wrapper:hover .card-body {
     display: flex;
@@ -206,9 +269,12 @@ body {
     align-items: center;
 }
 .template-2 .card-wrapper .title {
- font-size: 11px;
- color: #4A4A4A;
- font-weight: 600;
+    font-size: 12px;
+    font-weight: bold;
+    color: #236AAE;
+    text-decoration: none;
+    display: block;
+    margin-top: 2px;
 }
 .template-2 .card-wrapper .short-text {
     font-size: 11px;
@@ -260,11 +326,16 @@ body {
     right: 0;
     width: 100%;
     height: 100%;
+    opacity:1;
+    z-index: 1;
     background: linear-gradient(to right, black 10%, transparent 95%),linear-gradient( transparent 56%, black);
 }
+
 .template-3 .card-wrapper:hover .canvas {
-    background: transparent !important;
-    box-shadow: unset !important;
+    opacity: 0;
+    -webkit-transition: opacity 300ms linear;
+    -ms-transition: opacity 300ms linear;
+    transition: opacity 300ms linear;
 }
 .template-3 .card ,.template-3 .box-art {
     width: 536px;
@@ -273,6 +344,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     transition: all 0.3s;
+    overflow: hidden;
 }
 .template-3 .card-body {
     position: absolute;
@@ -285,6 +357,8 @@ body {
   font-size: 20px;
   font-weight: bold;
   color: white;
+  display: block;
+  text-decoration: none;
 }
 .template-3 .short-text {
     font-size: 20px;
@@ -350,7 +424,7 @@ body {
 .template-3 .screenshots-wrapper .screenshots {
     overflow: auto;
     display: flex;
-    width: 298px;
+    width: 320px;
 }
 .template-3 .screenshots-wrapper .box-art {
     width: 70px;
@@ -360,6 +434,8 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    border: 1px solid #979797;
+    border-radius: 2px;
 }
 .template-3 .add-to-cart {
     width: 40px;
@@ -376,86 +452,6 @@ body {
     cursor: pointer;
 }
 
-.template-4 .card {
-    display: flex;
-    height: 140px;
-    background: white;
-    position: relative;
-}
-.template-4 .card-wrapper {
-    position: relative;
-    margin: 0 15px;
-    width: 120px;
-}
-.template-4 .card-body {
-    display: none;
-}
-.template-4 .card:hover, .template-4 .card-wrapper .card-body:hover +.card{
-    filter:  brightness(0.35);
-}
-.template-4 .card-wrapper:hover .card {
-    filter:  brightness(0.35);
-
-}
-.template-4 .card-wrapper:hover .card-body {
-    display: flex;
-    position: absolute;
-    z-index: 1;
-    justify-content: center;
-    height: 140px;
-    align-items: center;
-}
-.template-4 .card-wrapper .title {
- font-size: 11px;
- color: #4A4A4A;
- font-weight: 600;
-}
-.template-4 .card-wrapper .short-text {
-    font-size: 11px;
-    color: #4A4A4A;
-    font-weight: 400;
-}
-.template-4 .title,.template-4 .short-text {
-    text-align: center;
-}
-.template-4 .price {
-    color:#79000F;
-    font-size:12px;
-    text-align:center;
-    margin-left: 8px;
-}
-.template-4 .card .box-art {
-    width: 120px;
-    height: 140px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    transition: all 0.3s;
-}
-.template-4 .card-wrapper .long-text {
-    font-size:  11px;
-    font-weight: 400;
-    color: #4A4A4A;
-}
-
-
-.template-4 .add-to-cart {
-    font-weight: bold;
-    width: 67px;
-    min-width: 67px;
-    height: 57PX;
-    background: #236AAE;
-    color: white;
-    border-radius: 3px;
-    font-size: 10px;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    margin: auto 0;
-    margin-left: 35px;   
-}
-
 /* Styling Checkbox Starts */
 .checkbox-container {
    display: flex;
@@ -465,7 +461,6 @@ body {
 .checkbox-label {
     display: block;
     position: relative;
-    /* margin: auto; */
     cursor: pointer;
     height: 11px;
     width: 11px;
@@ -479,33 +474,31 @@ body {
     margin: 0;
 }
 
-
 .checkbox-label .checkbox-custom {
     position: absolute;
     top: 0px;
-    left: 0px;
+    left: -4px;
     height: 11px;
     width: 11px;
-    background-color: transparent;
-    border-radius: 5px;
+    background: white;
+    border-radius: 3px;
     transition: all 0.3s ease-out;
     -webkit-transition: all 0.3s ease-out;
     -moz-transition: all 0.3s ease-out;
     -ms-transition: all 0.3s ease-out;
     -o-transition: all 0.3s ease-out;
-    border: 2px solid #979797;
+    border: 2px solid grey;
 }
 
 .checkbox-label input:checked ~ .checkbox-custom {
-    background-color: #FFFFFF;
-    border-radius: 5px;
+    background-color: blue;
+    border-radius: 3px;
     -webkit-transform: rotate(0deg) scale(1);
     -ms-transform: rotate(0deg) scale(1);
     transform: rotate(0deg) scale(1);
     opacity:1;
-    border: 2px solid #979797;
+    border: 2px solid blue;
 }
-
 
 .checkbox-label .checkbox-custom::after {
     position: absolute;
@@ -528,7 +521,6 @@ body {
     -o-transition: all 0.3s ease-out;
 }
 
-
 .checkbox-label input:checked ~ .checkbox-custom::after {
   -webkit-transform: rotate(45deg) scale(1);
   -ms-transform: rotate(45deg) scale(1);
@@ -538,7 +530,7 @@ body {
   top: 0px;
   width: 3px;
   height: 7px;
-  border: solid #009BFF;
+  border: solid white;
   border-width: 0 2px 2px 0;
   background-color: transparent;
   border-radius: 0;
