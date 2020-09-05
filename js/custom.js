@@ -234,9 +234,9 @@ var blockData = {
       "handle": "days-gone-collectors-edition-ps4",
       "img_src": "https://cdn.shopify.com/s/files/1/0280/6457/9655/products/Days_Gone_CE_PS4_Cov.jpg?v=1592981533",
       "price": "$5.00",
-      "product_id": "VGSPS9943.210",
+      "product_id": "VGSPS99435210",
       "short_text":"lorem ipsum",
-      "clip":"assets/sample2.webm",
+      "clip":"assets/sample3.webm",
       "product_page":"https://www.amazon.in/b?ie=UTF8&node=21345254031",
       "long_text":"Shoot enemies and gather amazing loot to upgrade and customize your character as you see fit.",
       "title": "Days Gone: Collector’s Edition"
