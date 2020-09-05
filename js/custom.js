@@ -364,7 +364,7 @@ const playVideo = (video,template,card) => {
     video.style.width = "270px";
     parentElement.querySelector(".card-footer").style.left = "201px";
   }
-  if(!video.src.includes("null")) {
+  if(video.readyState == 4) {
     video.play();
   }
 }
@@ -410,9 +410,7 @@ const getRcBlocks = (recData, index, recBlock, template, noOfCards) => {
     recData.forEach((record,cardIndex) => {
       cards+= `<div class="card"  onmouseleave="pauseVideo(bgvid${record.product_id},'${template}',this)">
       <div class="card-body"> 
-        <video poster="${record.img_src}" id="bgvid${record.product_id}" playsinline muted loop  onmouseover="playVideo(bgvid${record.product_id},'${template}',this)">
-          <source src="${record.clip}">
-        </video> 
+        <video poster="${record.img_src}" src="${record.clip}" id="bgvid${record.product_id}" playsinline muted loop  onmouseover="playVideo(bgvid${record.product_id},'${template}',this)"></video> 
         <div class="card-footer">
           ${record.price ? `<div class="price">${record.price}</div>`: ""}
           <i class="fa fa-shopping-cart" aria-hidden="true" onclick="addToCartHandler('${record.product_id}',${cardIndex},'single')"></i>
@@ -472,8 +470,7 @@ const getRcBlocks = (recData, index, recBlock, template, noOfCards) => {
         </div>
       </div>
       <div class="card">
-        <video poster="${record.img_src}" src="${record.clip}" id="bgvid${record.product_id}" playsinline muted loop>
-        </video>
+        <video poster="${record.img_src}" src="${record.clip}" id="bgvid${record.product_id}" playsinline muted loop></video>
       </div>
       </div>`
     });
@@ -481,9 +478,7 @@ const getRcBlocks = (recData, index, recBlock, template, noOfCards) => {
     recData.forEach((record, cardIndex) => {
     cards+= `<div class="card"  onmouseleave="pauseVideo(bgvid${record.product_id},'${template}',this)">
       <div class="card-body"> 
-        <video poster="${record.img_src}" id="bgvid${record.product_id}" playsinline muted loop  onmouseover="playVideo(bgvid${record.product_id},'${template}',this)">
-          <source src="${record.clip}">
-        </video> 
+        <video poster="${record.img_src}" src="${record.clip}" id="bgvid${record.product_id}" playsinline muted loop  onmouseover="playVideo(bgvid${record.product_id},'${template}',this)"></video> 
         <div class="card-footer">
           <label class="checkbox-label">
               <input type="checkbox" checked value=${record.product_id}>
