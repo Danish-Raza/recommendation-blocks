@@ -7,7 +7,7 @@ var blockData = {
       "clip":"assets/sample2.webm",
       "img_src": "https://cdn.shopify.com/s/files/1/0280/6457/9655/products/My_Time_at_Portia_Xb1_Cov.jpg?v=1592981794",
       "price": "$5.00",
-      "product_id": 454591,
+      "product_id": 4545-91,
       "short_text":"lorem ipsum",
       "long_text":"Shoot enemies and gather amazing loot to upgrade and customize your character as you see fit.",
       "title": "My Time at Portia"
@@ -69,7 +69,7 @@ var blockData = {
       "handle": "agents-of-mayhem-xb1",
       "img_src": "https://cdn.shopify.com/s/files/1/0280/6457/9655/products/game_cover_688d87af2ef876214d649b588469b7af.jpg?v=1592985340",
       "price": "$5.00",
-      "product_id": "VGSXB1-1397",
+      "product_id": "VGSXB11397",
       "product_page":"https://www.amazon.in/b?ie=UTF8&node=21345254031",
       "short_text":"lorem ipsum",
       "long_text":"Shoot enemies and gather amazing loot to upgrade and customize your character as you see fit.",
@@ -80,7 +80,7 @@ var blockData = {
       "handle": "days-gone-digital-deluxe-edition-ps4",
       "img_src": "https://cdn.shopify.com/s/files/1/0280/6457/9655/products/Days-Gone-Digital-Deluxe-Edition-ps4cvr.jpg?v=1592981531",
       "price": "",
-      "product_id": "VGSPS4-3.18",
+      "product_id": "VGSPS4318",
       "short_text":"lorem ipsum",
       "product_page":"https://www.amazon.in/b?ie=UTF8&node=21345254031",
       "long_text":"Shoot enemies and gather amazing loot to upgrade and customize your character as you see fit.",
@@ -190,7 +190,7 @@ var blockData = {
         "https://s3.amazonaws.com/gameopedia_covers/screenshots/1431580/5742bbae7a1807aa2937436f35a0dc0c_full480.jpg"
       ],
       "price": "$5.00",
-      "product_id": 4545919,
+      "product_id": 45459-19,
       "short_text":"lorem ipsum",
       "clip":"assets/sample2.webm",
       "product_page":"https://www.amazon.in/b?ie=UTF8&node=21345254031",
@@ -208,7 +208,7 @@ var blockData = {
         "https://s3.amazonaws.com/gameopedia_covers/screenshots/1431580/5742bbae7a1807aa2937436f35a0dc0c_full480.jpg"
       ],
       "price": "$10.00",
-      "product_id": 2897420,
+      "product_id": 28974-20,
       "short_text":"lorem ipsum",
       "clip":"assets/sample.mp4",
       "product_page":"https://www.amazon.in/b?ie=UTF8&node=21345254031",
@@ -234,7 +234,7 @@ var blockData = {
       "handle": "days-gone-collectors-edition-ps4",
       "img_src": "https://cdn.shopify.com/s/files/1/0280/6457/9655/products/Days_Gone_CE_PS4_Cov.jpg?v=1592981533",
       "price": "$5.00",
-      "product_id": "VGSPS99435210",
+      "product_id": "VGSPS-99435210",
       "short_text":"lorem ipsum",
       "clip":"assets/sample3.webm",
       "product_page":"https://www.amazon.in/b?ie=UTF8&node=21345254031",
@@ -256,16 +256,20 @@ var blockData = {
 }
 const cardConfig = {
   "template-1": {
-    card:{ height: 140, width: 266, margin: 15, extraWidth: 100}
+    container: { background:"white", titleAlignment: "left", titleColor: "black", titleSize: 14 },
+    card:{ height: 140, width: 266, margin: 15, extraWidth: 100, background: "white"}
   },
   "template-2": {
-    card:{ height: 140, width: 120, margin: 15, extraWidth: 240}
+    container: { background:"white", titleAlignment: "left", titleColor: "black", titleSize: 14 },
+    card:{ height: 140, width: 120, margin: 15, extraWidth: 220}
   },
   "template-3": {
+    container: { background:"white", titleAlignment: "left", titleColor: "black", titleSize: 14 },
     card:{ height: 358, width: 536, margin: 15, extraWidth: 100}
   },
   "template-4": {
-    card:{ height: 140, width: 266, margin: 15, extraWidth: 100}
+    container: { background:"white", titleAlignment: "left", titleColor: "black", titleSize: 14 },
+    card:{ height: 140, width: 266, margin: 15, extraWidth: 100, background: "white"}
   },
 }
 
@@ -273,8 +277,8 @@ const scrollHandler = (containerIndex,order,paginationIndex) => {
   let rcBlock = document.querySelector(`[data-container-index="${containerIndex}"]`);
   let availableWidht = window.screen.availWidth;
   let paginationBlock = document.querySelector(`#pagination-block${containerIndex}`);
-  let itagRight =   document.querySelectorAll(".content-box")[containerIndex-1].querySelector(".fa-chevron-right");
-  let itagleft =   document.querySelectorAll(".content-box")[containerIndex-1].querySelector(".fa-chevron-left");
+  let itagRight = document.querySelectorAll(".content-box")[containerIndex-1].querySelector(".fa-chevron-right");
+  let itagleft = document.querySelectorAll(".content-box")[containerIndex-1].querySelector(".fa-chevron-left");
   let bulletIndex =  Math.ceil(rcBlock.scrollLeft/availableWidht);
   if(order=="right") {
     rcBlock.scrollLeft -= availableWidht;
@@ -338,14 +342,35 @@ const addToCartHandler = (productId, containerIndex, order) => {
 window.onload = () => {
   var gameopediaRecommendationBlock = document.getElementById("gameopedia-recommendation-block");
   var index = 0;
+  const params = new URLSearchParams(window.location.search);
+  let page = params.get("page");
+  let api_key = "123abc567zx";
+  const templateMapping = {
+    "Other Role-Playing Games": "template-1",
+    "Other users like you also bought": "template-2",
+    "Other Role-Playing Game": "template-3",
+    "Frequently bought together": "template-4"
+  }
   for (var recBlock in blockData) {
     index++;
-    let template = `template-${index}`;
+    let template = templateMapping[recBlock] ? templateMapping[recBlock] : "template-1";
     let noOfCards = blockData[recBlock].length;
     let block = getRcBlocks(blockData[recBlock], index, recBlock, template, noOfCards);
     gameopediaRecommendationBlock.innerHTML += block;
   }
   paginationHandler()
+  // fetch('https://api.github.com/repos/javascript-tutorial/en.javascript.info/commits')
+  // .then(response => response.json())
+  // .then(data => {
+  //   for (var recBlock in blockData) {
+  //     index++;
+  //     let template = templateMapping[recBlock] ? templateMapping[recBlock] : "template-1";
+  //     let noOfCards = blockData[recBlock].length;
+  //     let block = getRcBlocks(blockData[recBlock], index, recBlock, template, noOfCards);
+  //     gameopediaRecommendationBlock.innerHTML += block;
+  //   }
+  //   paginationHandler()
+  // }).catch( err => err)
 }
 
 window.onresize = paginationHandler;
@@ -358,11 +383,11 @@ const playVideo = (video,template,card) => {
     video.style["--ms-transform"] = "scale(1.2)";
   }
   if(template == "template-1") {
-    video.style.width = "270px";
-    parentElement.querySelector(".card-footer").style.left = "185px";
+    video.style.width = `${cardConfig[template].card.width}px`;
+    parentElement.querySelector(".card-footer").style.left = `${cardConfig[template].card.width-81}px`;
   } else if(template == "template-4") {
-    video.style.width = "270px";
-    parentElement.querySelector(".card-footer").style.left = "201px";
+    video.style.width = `${cardConfig[template].card.width}px`;
+    parentElement.querySelector(".card-footer").style.left = `${cardConfig[template].card.width-65}px`;
   }
   if(video.readyState == 4) {
     video.play();
@@ -372,16 +397,16 @@ const playVideo = (video,template,card) => {
 const pauseVideo = (video,template,card) => {
   if(template == "template-1" || template == "template-4") {
     video.load()
-    video.style.width = "120px";
+    video.style.width = `${(cardConfig[template].card.width/2)-10}px`;
     video.style.transform = "scale(1.0)";
     video.style["-webkit-transform"] = "scale(1.0)"; 
     video.style["--ms-transform"] = "scale(1.0)";
     if(template=="template-1") {
-      card.querySelector(".card-footer").style.left="120px";
+      card.querySelector(".card-footer").style.left=`${(cardConfig[template].card.width/2)-10}px`;
     } else {
-      card.querySelector(".card-footer").style.left="135px";
+      card.querySelector(".card-footer").style.left=`${(cardConfig[template].card.width/2)+4}px`;
     }
-  } else if(template == "template-3") {
+  } else if(template == "template-3" && video.pause) {
     video.pause();
   }
 }
@@ -401,17 +426,37 @@ const screenShotsHandler = (selectedUrl, videoElement, order, element) => {
     videoElement.style["--ms-transform"] = "scale(1.2)";
     videoElement.play();
   }
+}
 
+const screenShotsScrollHandler = (element,order) => {
+  let screenshots = element.querySelector(".screenshots");
+  let scrollLeft = screenshots.scrollLeft;
+  let itagRight = element.querySelector(".right-arrow");
+  let itagleft = element.querySelector(".left-arrow");
+  if(order == "right") {
+    screenshots.scrollLeft+= 83;
+  } else if(order == "left") {
+    screenshots.scrollLeft-= 83;
+  } else if(order == "move") {
+    if(scrollLeft == 0) {
+      itagleft.style.color = "grey";
+      itagRight.style.color = "white";
+    } else {
+      itagleft.style.color = "white";
+      itagRight.style.color = "grey";
+    }
+
+  }
 }
 
 const getRcBlocks = (recData, index, recBlock, template, noOfCards) => {
   let cards = ""
   if(template == "template-1") {
     recData.forEach((record,cardIndex) => {
-      cards+= `<div class="card"  onmouseleave="pauseVideo(bgvid${record.product_id},'${template}',this)">
+      cards+= `<div class="card" style="min-width:${cardConfig[template].card.width}px;max-width:${cardConfig[template].card.width}px;height:${cardConfig[template].card.height}px;background:${cardConfig[template].card.background}" onmouseleave="pauseVideo(bgvidContainer${index}Card${cardIndex},'${template}',this)">
       <div class="card-body"> 
-        <video poster="${record.img_src}" src="${record.clip}" id="bgvid${record.product_id}" playsinline muted loop  onmouseover="playVideo(bgvid${record.product_id},'${template}',this)"></video> 
-        <div class="card-footer">
+        <video poster="${record.img_src}" src="${record.clip}" id="bgvidContainer${index}Card${cardIndex}", playsinline muted loop  onmouseover="playVideo(bgvidContainer${index}Card${cardIndex},'${template}',this)"></video> 
+        <div class="card-footer" style="left:${(cardConfig[template].card.width/2)-7}px">
           ${record.price ? `<div class="price">${record.price}</div>`: ""}
           <i class="fa fa-shopping-cart" aria-hidden="true" onclick="addToCartHandler('${record.product_id}',${cardIndex},'single')"></i>
         </div> 
@@ -426,31 +471,33 @@ const getRcBlocks = (recData, index, recBlock, template, noOfCards) => {
   } else if(template == "template-2") {
     recData.forEach((record, cardIndex) => {
       cards += `<div class="card-wrapper">
-      <div class="card-body">
+      <div class="card-body" style="height:${cardConfig[template].card.height}px;align-item:center">
         <div class="card-footer">
           <div class="long-text" style="color:white;text-align:center;padding:5px">${record.long_text ? record.long_text : ""}</div>
-          <div style="display:flex;justify-content: center; width: 120px">
+          <div style="display:flex;justify-content: center;width:${cardConfig[template].card.width}px">
           <div class="price" style="color:#F8E71C">${record.price ? record.price :""}</div>
           <i class="fa fa-shopping-cart" aria-hidden="true"  onclick="addToCartHandler('${record.product_id}',${cardIndex},'single')"></i>
           </div>
         </div>
       </div>
       <div class="card">
-        <div class="box-art" style="background-image: url(${record.img_src});"></div>
+        <div class="box-art" style="background-image: url(${record.img_src});min-width:${cardConfig[template].card.width}px;max-width:${cardConfig[template].card.width}px;height:${cardConfig[template].card.height}px"></div>
       </div>
       <a class="title" href="${record.product_page}" target=_blank>${record.title ? record.title : ""}</a>
       <div class="short-text">${record.short_text ? record.short_text : ""}</div>
       </div>`
     });
   } else if(template == "template-3") {
-    //  <i class="fa fa-chevron-left" aria-hidden="true" style="color:#E1A3A4"></i>
-   // <i class="fa fa-chevron-right" aria-hidden="true" style="color:#E1A3A4"></i>
     recData.forEach((record, cardIndex) => {
-      let screenshots = `<div class="box-art" style="background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgb(143, 139, 136)), url(${record.img_src});color:white;display:flex;justify-content:center;align-item:center;cursor:pointer" onclick="screenShotsHandler('${record.clip}',bgvid${record.product_id},'video',this)"><i class="fa fa-play"></i></div>`;
-      record.screenshots.forEach(element => {
-        screenshots+= `<div class="box-art" style="background-image: url(${element});" onclick="screenShotsHandler('${element}',bgvid${record.product_id},'image',this)"></div>`
-      }); 
-      cards += `<div class="card-wrapper" onmouseover="playVideo(bgvid${record.product_id},'${template}',this)" onmouseleave="pauseVideo(bgvid${record.product_id},'${template}'),this" >
+      let screenshots = `<div class="box-art" style="background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgb(143, 139, 136)), url(${record.img_src});color:white;display:flex;justify-content:center;align-item:center;cursor:pointer" onclick="screenShotsHandler('${record.clip}',bgvidContainer${index}Card${cardIndex},'video',this)"><i class="fa fa-play"></i></div>`;
+      if(record.screenshots) {
+        record.screenshots.forEach(element => {
+          screenshots+= `<div class="box-art" style="background-image: url(${element});" onclick="screenShotsHandler('${element}',bgvidContainer${index}Card${cardIndex},'image',this)"></div>`
+        }); 
+      } else {
+        screenshots=""
+      }
+      cards += `<div class="card-wrapper" onmouseover="playVideo(bgvidContainer${index}Card${cardIndex},'${template}',this)" onmouseleave="pauseVideo(bgvidContainer${index}Card${cardIndex},'${template}'),this" >
       <canvas class="canvas"></canvas>
       <div class="card-body">
         <div class="card-header">
@@ -459,29 +506,31 @@ const getRcBlocks = (recData, index, recBlock, template, noOfCards) => {
           <div class="short-text">${record.short_text ? record.short_text : ""}</div>
           <div class="long-text">${record.long_text ? record.long_text : ""}</div>
         </div>
-        <div class="card-footer">
+        <div class="card-footer" style="width:${cardConfig[template].card.width-60}px">
           <div class="add-to-cart"><i class="fa fa-shopping-cart" aria-hidden="true" style="margin-right:5px;font-size:17px"  onclick="addToCartHandler('${record.product_id}',${cardIndex},'single')"></i></div> 
           ${record.price ? `<div class="right-section">${record.on_sale ?"<div class='on-sale'>ON SALE</div>" : ""}<div class="price">${record.price}</div></div>`: ""}
-          ${screenshots != "" ? `<div class="screenshots-wrapper">
-          <div class="screenshots">
+          ${screenshots != "" ? `<div class="screenshots-wrapper" id="screenShotsContainer${index}Card${cardIndex}">
+          <span class="left-arrow" onclick="screenShotsScrollHandler(screenShotsContainer${index}Card${cardIndex},'left')">&#10148;</span>          
+          <div class="screenshots" onscroll="screenShotsScrollHandler(screenShotsContainer${index}Card${cardIndex},'move')">
             ${screenshots}
           </div>
+          <span class="right-arrow" onclick="screenShotsScrollHandler(screenShotsContainer${index}Card${cardIndex},'right')">&#10148;</span>          
           </div> `: ""}
         </div>
       </div>
-      <div class="card">
-        <video poster="${record.img_src}" src="${record.clip}" id="bgvid${record.product_id}" playsinline muted loop></video>
+      <div class="card" style="min-width:${cardConfig[template].card.width}px;max-width:${cardConfig[template].card.width}px;height:${cardConfig[template].card.height}px">
+        <video poster="${record.img_src}" src="${record.clip}" id="bgvidContainer${index}Card${cardIndex}" playsinline muted loop style="min-width:${cardConfig[template].card.width}px;max-width:${cardConfig[template].card.width}px;height:${cardConfig[template].card.height}px"></video>
       </div>
       </div>`
     });
   } else if(template == "template-4") {
     recData.forEach((record, cardIndex) => {
-    cards+= `<div class="card"  onmouseleave="pauseVideo(bgvid${record.product_id},'${template}',this)">
+    cards+= `<div class="card"  onmouseleave="pauseVideo(bgvidContainer${index}Card${cardIndex},'${template}',this)" style="min-width:${cardConfig[template].card.width}px;max-width:${cardConfig[template].card.width}px;height:${cardConfig[template].card.height}px;background:${cardConfig[template].card.background}">
       <div class="card-body"> 
-        <video poster="${record.img_src}" src="${record.clip}" id="bgvid${record.product_id}" playsinline muted loop  onmouseover="playVideo(bgvid${record.product_id},'${template}',this)"></video> 
-        <div class="card-footer">
+        <video poster="${record.img_src}" src="${record.clip}" id="bgvidContainer${index}Card${cardIndex}" playsinline muted loop  onmouseover="playVideo(bgvidContainer${index}Card${cardIndex},'${template}',this)"></video> 
+        <div class="card-footer" style="left:${(cardConfig[template].card.width/2)+5}px">
           <label class="checkbox-label">
-              <input type="checkbox" checked value=${record.product_id}>
+              <input type="checkbox" checked value='${record.product_id}'>
               <span class="checkbox-custom rectangular"></span>
           </label>
           <div class="price">${record.price ? record.price :""}</div>
@@ -498,8 +547,8 @@ const getRcBlocks = (recData, index, recBlock, template, noOfCards) => {
     cards+=`<div class="add-to-cart" onclick="addToCartHandler(null,${index},'multi')">ADD TO CART</div>`
   }
   return (
-    `<div class="content-box ${template}" data-template="${template}" data-no-of-cards="${noOfCards}">
-      <div class="content-title"> ${recBlock}</div>
+    `<div class="content-box ${template}" data-template="${template}" data-no-of-cards="${noOfCards}" style="background:${cardConfig[template].container.background}">
+      <div class="content-title" style="text-align:${cardConfig[template].container.titleAlignment};color:${cardConfig[template].container.titleColor};font-size:${cardConfig[template].container.titleSize}px"> ${recBlock}</div>
       <div class="container-wrapper">
         <i class="fa fa-chevron-left" aria-hidden="true" onclick="scrollHandler(${index},'right')"></i>
         <div class="container" data-container-index="${index}" onscroll="scrollHandler(${index},'move')">
