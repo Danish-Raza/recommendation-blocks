@@ -572,7 +572,7 @@ const getRcBlocks = (recData, index, recBlock, template, noOfCards) => {
         </div>
         <i class="fa fa-chevron-right" aria-hidden="true" onclick="scrollHandler(${index},'left')"></i>
       </div>
-      <div class="pagination" id="pagination-block${index}"></div>
+      <div class="pagination" id="pagination-block${index}"> </div>
     </div>`
   )
 }
