@@ -351,61 +351,69 @@ window.onload = () => {
     "Other Role-Playing Game": "template-3",
     "Frequently bought together": "template-4"
   }
-  for (var recBlock in blockData) {
-    index++;
-    let template = templateMapping[recBlock] ? templateMapping[recBlock] : "template-1";
-    let noOfCards = blockData[recBlock].length;
-    let block = getRcBlocks(blockData[recBlock], index, recBlock, template, noOfCards);
-    gameopediaRecommendationBlock.innerHTML += block;
-  }
-  paginationHandler()
-  // fetch('https://api.github.com/repos/javascript-tutorial/en.javascript.info/commits')
-  // .then(response => response.json())
-  // .then(data => {
-  //   for (var recBlock in blockData) {
-  //     index++;
-  //     let template = templateMapping[recBlock] ? templateMapping[recBlock] : "template-1";
-  //     let noOfCards = blockData[recBlock].length;
-  //     let block = getRcBlocks(blockData[recBlock], index, recBlock, template, noOfCards);
-  //     gameopediaRecommendationBlock.innerHTML += block;
-  //   }
-  //   paginationHandler()
-  // }).catch( err => err)
+  fetch('https://api.github.com/repos/javascript-tutorial/en.javascript.info/commits')
+  .then(response => response.json())
+  .then(data => {
+    for (var recBlock in blockData) {
+      index++;
+      let template = templateMapping[recBlock] ? templateMapping[recBlock] : "template-1";
+      let noOfCards = blockData[recBlock].length;
+      let block = getRcBlocks(blockData[recBlock], index, recBlock, template, noOfCards);
+      gameopediaRecommendationBlock.innerHTML += block;
+    }
+    paginationHandler()
+  }).catch( err => err)
 }
 
 window.onresize = paginationHandler;
 
-const playVideo = (video,template,card) => {
+const playVideo = (video,template,card,cardIndex) => {
   let parentElement = card.parentNode; 
-  if(video.paused == false) {
-    video.style.transform = "scale(1.2)";
-    video.style["-webkit-transform"] = "scale(1.2)";
-    video.style["--ms-transform"] = "scale(1.2)";
-  }
   if(template == "template-1") {
+    if(video.paused == false) {
+      video.style.transform = "scale(1.2)";
+      video.style["-webkit-transform"] = "scale(1.2)";
+      video.style["--ms-transform"] = "scale(1.2)";
+    }
     video.style.width = `${cardConfig[template].card.width}px`;
     parentElement.querySelector(".card-footer").style.left = `${cardConfig[template].card.width-81}px`;
-  } else if(template == "template-4") {
+  } else if(template == "template-4" && cardIndex!=0) {
+    if(video.paused == false) {
+      video.style.transform = "scale(1.2)";
+      video.style["-webkit-transform"] = "scale(1.2)";
+      video.style["--ms-transform"] = "scale(1.2)";
+    }
     video.style.width = `${cardConfig[template].card.width}px`;
     parentElement.querySelector(".card-footer").style.left = `${cardConfig[template].card.width-65}px`;
+  } else if(template == "template-3") {
+    if(video.paused == false) {
+      video.style.transform = "scale(1.2)";
+      video.style["-webkit-transform"] = "scale(1.2)";
+      video.style["--ms-transform"] = "scale(1.2)";
+    }
   }
-  if(video.readyState == 4) {
+  if(video.readyState == 4 && template=="template-4" && cardIndex!=0) {
+    video.play();
+  } else if(video.readyState == 4 && template!="template-4") {
     video.play();
   }
 }
 
-const pauseVideo = (video,template,card) => {
-  if(template == "template-1" || template == "template-4") {
+const pauseVideo = (video,template,card,cardIndex) => {
+  if(template=="template-1") {
     video.load()
     video.style.width = `${(cardConfig[template].card.width/2)-10}px`;
     video.style.transform = "scale(1.0)";
     video.style["-webkit-transform"] = "scale(1.0)"; 
     video.style["--ms-transform"] = "scale(1.0)";
-    if(template=="template-1") {
-      card.querySelector(".card-footer").style.left=`${(cardConfig[template].card.width/2)-10}px`;
-    } else {
-      card.querySelector(".card-footer").style.left=`${(cardConfig[template].card.width/2)+4}px`;
-    }
+    card.querySelector(".card-footer").style.left=`${(cardConfig[template].card.width/2)-10}px`;
+  } else if(template == "template-4" && cardIndex != 0) {
+    video.load()
+    video.style.width = `${(cardConfig[template].card.width/2)-10}px`;
+    video.style.transform = "scale(1.0)";
+    video.style["-webkit-transform"] = "scale(1.0)"; 
+    video.style["--ms-transform"] = "scale(1.0)";
+    card.querySelector(".card-footer").style.left=`${(cardConfig[template].card.width/2)+4}px`;
   } else if(template == "template-3" && video.pause) {
     video.pause();
   }
@@ -477,7 +485,7 @@ const getRcBlocks = (recData, index, recBlock, template, noOfCards) => {
           <div style="display:flex;justify-content: center;width:${cardConfig[template].card.width}px">
           <div class="price" style="color:#F8E71C">${record.price ? record.price :""}</div>
           <i class="fa fa-shopping-cart" aria-hidden="true"  onclick="addToCartHandler('${record.product_id}',${cardIndex},'single')"></i>
-          </div>
+          </div>cardIndex
         </div>
       </div>
       <div class="card">
@@ -525,14 +533,14 @@ const getRcBlocks = (recData, index, recBlock, template, noOfCards) => {
     });
   } else if(template == "template-4") {
     recData.forEach((record, cardIndex) => {
-    cards+= `<div class="card"  onmouseleave="pauseVideo(bgvidContainer${index}Card${cardIndex},'${template}',this)" style="min-width:${cardConfig[template].card.width}px;max-width:${cardConfig[template].card.width}px;height:${cardConfig[template].card.height}px;background:${cardConfig[template].card.background}">
+    cards+= `<div class="card"  onmouseleave="pauseVideo(bgvidContainer${index}Card${cardIndex},'${template}',this,${cardIndex})" style="min-width:${cardConfig[template].card.width}px;max-width:${cardConfig[template].card.width}px;height:${cardConfig[template].card.height}px;background:${cardConfig[template].card.background}">
       <div class="card-body"> 
-        <video poster="${record.img_src}" src="${record.clip}" id="bgvidContainer${index}Card${cardIndex}" playsinline muted loop  onmouseover="playVideo(bgvidContainer${index}Card${cardIndex},'${template}',this)"></video> 
-        <div class="card-footer" style="left:${(cardConfig[template].card.width/2)+5}px">
-          <label class="checkbox-label">
+        <video poster="${record.img_src}" src="${record.clip}" id="bgvidContainer${index}Card${cardIndex}" playsinline muted loop  onmouseover="playVideo(bgvidContainer${index}Card${cardIndex},'${template}',this,${cardIndex})"></video> 
+        <div class="card-footer" style="left:${cardIndex!=0 ? (cardConfig[template].card.width/2)+5 : (cardConfig[template].card.width/2)-7}px">
+         ${ cardIndex != 0 ? `<label class="checkbox-label">
               <input type="checkbox" checked value='${record.product_id}'>
               <span class="checkbox-custom rectangular"></span>
-          </label>
+          </label>` : ""}
           <div class="price">${record.price ? record.price :""}</div>
         </div>
       </div>

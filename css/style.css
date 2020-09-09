@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     background-repeat: no-repeat;
-    font-family: Montserrat;
+    font-family: Inter;
 }
 .container {
     display: flex;
@@ -177,12 +177,23 @@ body {
     height: 20px;
     border-radius: 2px;
 }
-.template-4 .card-footer .price {
+.template-4 .card-footer .price:not(:first-child) {
     font-size: 12px;
     font-weight: 600;
     color: #79000F;
     background: white;
     width: 53px;
+    height: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.template-4 .card-footer .price:first-child {
+    font-size: 12px;
+    font-weight: 600;
+    color: #79000F;
+    background: white;
+    width: 44px;
     height: 15px;
     display: flex;
     align-items: center;
@@ -321,7 +332,7 @@ body {
 }
 
 .template-3 .card-wrapper:hover .canvas {
-    opacity: 0;
+    opacity: 0.9;
     -webkit-transition: opacity 300ms linear;
     -ms-transition: opacity 300ms linear;
     transition: opacity 300ms linear;
