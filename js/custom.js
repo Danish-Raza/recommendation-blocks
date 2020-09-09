@@ -298,7 +298,7 @@ const scrollHandler = (containerIndex,order,paginationIndex) => {
     itagRight.style.color="black";
   } else {
     itagRight.style.color="black";
-    itagleft.style.color="black";
+    itagleft.style.color="black" ;
   }
 }
 
