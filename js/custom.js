@@ -359,18 +359,6 @@ window.onload = () => {
     gameopediaRecommendationBlock.innerHTML += block;
   }
   paginationHandler()
-  // fetch('https://api.github.com/repos/javascript-tutorial/en.javascript.info/commits')
-  // .then(response => response.json())
-  // .then(data => {
-  //   for (var recBlock in blockData) {
-  //     index++;
-  //     let template = templateMapping[recBlock] ? templateMapping[recBlock] : "template-1";
-  //     let noOfCards = blockData[recBlock].length;
-  //     let block = getRcBlocks(blockData[recBlock], index, recBlock, template, noOfCards);
-  //     gameopediaRecommendationBlock.innerHTML += block;
-  //   }
-  //   paginationHandler()
-  // }).catch( err => err)
 }
 
 window.onresize = paginationHandler;
