@@ -347,7 +347,7 @@ window.onload = () => {
   let api_key = "123abc567zx";
   const templateMapping = {
     "Other Role-Playing Games": "template-1",
-    "Other users like you also bought": "template-2",
+    "Other users like you also bought": "template-1",
     "Other Role-Playing Game": "template-3",
     "Frequently bought together": "template-4"
   }
