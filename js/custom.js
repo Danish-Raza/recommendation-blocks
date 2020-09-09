@@ -35,7 +35,7 @@ var blockData = {
     {
       "discount": "",
       "handle": "bless-online-win",
-      "img_src": "https://cdn.shopify.com/s/files/1/0280/6457/9655/products/BLESS_ONLINE_win_cov.jpg?v=1592984940",
+      "img_src": "",
       "product_page":"https://www.amazon.in/b?ie=UTF8&node=21345254031",
       "price": "$5.00",
        "clip":"assets/sample3.webm",
@@ -364,45 +364,49 @@ window.onload = () => {
 window.onresize = paginationHandler;
 
 const playVideo = (video,template,card,cardIndex) => {
-  let parentElement = card.parentNode; 
-  if(template == "template-1") {
-    if(video.paused == false) {
-      video.style.transform = "scale(1.2)";
-      video.style["-webkit-transform"] = "scale(1.2)";
-      video.style["--ms-transform"] = "scale(1.2)";
+  if(video.readyState == 4) {
+    let parentElement = card.parentNode; 
+    if(template == "template-1") {
+      if(video.paused == false) {
+        video.style.transform = "scale(1.2)";
+        video.style["-webkit-transform"] = "scale(1.2)";
+        video.style["--ms-transform"] = "scale(1.2)";
+      }
+      video.style.width = `${cardConfig[template].card.width}px`;
+      parentElement.querySelector(".card-footer").style.left = `${cardConfig[template].card.width-81}px`;
+    } else if(template == "template-4" && cardIndex!=0) {
+      if(video.paused == false) {
+        video.style.transform = "scale(1.2)";
+        video.style["-webkit-transform"] = "scale(1.2)";
+        video.style["--ms-transform"] = "scale(1.2)";
+      }
+      video.style.width = `${cardConfig[template].card.width}px`;
+      parentElement.querySelector(".card-footer").style.left = `${cardConfig[template].card.width-65}px`;
+    } else if(template == "template-3") {
+      if(video.paused == false) {
+        video.style.transform = "scale(1.2)";
+        video.style["-webkit-transform"] = "scale(1.2)";
+        video.style["--ms-transform"] = "scale(1.2)";
+      }
     }
-    video.style.width = `${cardConfig[template].card.width}px`;
-    parentElement.querySelector(".card-footer").style.left = `${cardConfig[template].card.width-81}px`;
-  } else if(template == "template-4" && cardIndex!=0) {
-    if(video.paused == false) {
-      video.style.transform = "scale(1.2)";
-      video.style["-webkit-transform"] = "scale(1.2)";
-      video.style["--ms-transform"] = "scale(1.2)";
+    if(template=="template-4" && cardIndex!=0) {
+      video.play();
+    } else if(template!="template-4") {
+      video.play();
     }
-    video.style.width = `${cardConfig[template].card.width}px`;
-    parentElement.querySelector(".card-footer").style.left = `${cardConfig[template].card.width-65}px`;
-  } else if(template == "template-3") {
-    if(video.paused == false) {
-      video.style.transform = "scale(1.2)";
-      video.style["-webkit-transform"] = "scale(1.2)";
-      video.style["--ms-transform"] = "scale(1.2)";
-    }
-  }
-  if(video.readyState == 4 && template=="template-4" && cardIndex!=0) {
-    video.play();
-  } else if(video.readyState == 4 && template!="template-4") {
-    video.play();
   }
 }
 
 const pauseVideo = (video,template,card,cardIndex) => {
-  if(template=="template-1") {
+  if(template == "template-1") {
     video.load()
     video.style.width = `${(cardConfig[template].card.width/2)-10}px`;
     video.style.transform = "scale(1.0)";
     video.style["-webkit-transform"] = "scale(1.0)"; 
     video.style["--ms-transform"] = "scale(1.0)";
     card.querySelector(".card-footer").style.left=`${(cardConfig[template].card.width/2)-10}px`;
+  } else if(template == "template-3") {
+    video.pause();
   } else if(template == "template-4" && cardIndex != 0) {
     video.load()
     video.style.width = `${(cardConfig[template].card.width/2)-10}px`;
@@ -410,8 +414,6 @@ const pauseVideo = (video,template,card,cardIndex) => {
     video.style["-webkit-transform"] = "scale(1.0)"; 
     video.style["--ms-transform"] = "scale(1.0)";
     card.querySelector(".card-footer").style.left=`${(cardConfig[template].card.width/2)+4}px`;
-  } else if(template == "template-3" && video.pause) {
-    video.pause();
   }
 }
 
@@ -459,7 +461,7 @@ const getRcBlocks = (recData, index, recBlock, template, noOfCards) => {
     recData.forEach((record,cardIndex) => {
       cards+= `<div class="card" style="min-width:${cardConfig[template].card.width}px;max-width:${cardConfig[template].card.width}px;height:${cardConfig[template].card.height}px;background:${cardConfig[template].card.background}" onmouseleave="pauseVideo(bgvidContainer${index}Card${cardIndex},'${template}',this)">
       <div class="card-body"> 
-        <video poster="${record.img_src}" src="${record.clip}" id="bgvidContainer${index}Card${cardIndex}", playsinline muted loop  onmouseover="playVideo(bgvidContainer${index}Card${cardIndex},'${template}',this)"></video> 
+        <video poster="${record.img_src ? record.img_src : "assets/no-image.jpeg"}" src="${record.clip }" id="bgvidContainer${index}Card${cardIndex}", playsinline muted loop  onmouseover="playVideo(bgvidContainer${index}Card${cardIndex},'${template}',this)"></video> 
         <div class="card-footer" style="left:${(cardConfig[template].card.width/2)-7}px">
           ${record.price ? `<div class="price">${record.price}</div>`: ""}
           <i class="fa fa-shopping-cart" aria-hidden="true" onclick="addToCartHandler('${record.product_id}',${cardIndex},'single')"></i>
@@ -481,7 +483,7 @@ const getRcBlocks = (recData, index, recBlock, template, noOfCards) => {
           <div style="display:flex;justify-content: center;width:${cardConfig[template].card.width}px">
           <div class="price" style="color:#F8E71C">${record.price ? record.price :""}</div>
           <i class="fa fa-shopping-cart" aria-hidden="true"  onclick="addToCartHandler('${record.product_id}',${cardIndex},'single')"></i>
-          </div>cardIndex
+          </div>
         </div>
       </div>
       <div class="card">
