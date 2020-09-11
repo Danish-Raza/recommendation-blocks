@@ -41,11 +41,11 @@ var blockData = {
       "handle": "bless-online-win",
       "img_src": "https://cdn.shopify.com/s/files/1/0280/6457/9655/products/BLESS_ONLINE_win_cov.jpg?v=1592984940",
       "product_page":"https://www.amazon.in/b?ie=UTF8&node=21345254031",
-      // "screenshots":[
-      //   "assets/bless/9cd033c9851d402daca72283c90bb5dc.jpg",
-      //   "assets/bless/51ac315aaaca441e881c69679f9b0bd3.jpg",
-      //   "assets/bless/2750f121692e4532a1d160001a5f11b5.jpg",
-      // ],
+      "screenshots":[
+        "assets/bless/9cd033c9851d402daca72283c90bb5dc.jpg",
+        "assets/bless/51ac315aaaca441e881c69679f9b0bd3.jpg",
+        "assets/bless/2750f121692e4532a1d160001a5f11b5.jpg",
+      ],
       "price": "$5.00",
       "clip":"assets/Ni no Kuni II Revenant Kingdom - Rmp4.webm",
       "product_id": 200504,
@@ -218,7 +218,7 @@ var blockData = {
         "https://s3.amazonaws.com/gameopedia_covers/screenshots/1431580/5742bbae7a1807aa2937436f35a0dc0c_full480.jpg"
       ],
       "price": "$10.00",
-      "product_id": 28974-20,
+      "product_id": 28979920,
       "short_text":"lorem ipsum",
       "clip":"assets/Ni no Kuni II Revenant Kingdom - Rmp4.webm",
       "product_page":"https://www.amazon.in/b?ie=UTF8&node=21345254031",
@@ -374,63 +374,88 @@ window.onload = () => {
 }
 
 window.onresize = paginationHandler;
-
+var slideIndex = 0;
 const playVideo = (video,template,card,cardIndex,order) => {
   let parentElement = card.parentNode; 
   // if(video.readyState == 4) {
-    if(template == "template-1") {
-      // if(video.paused == false) {
-      //   video.style.transform = "scale(1.2)";
-      //   video.style["-webkit-transform"] = "scale(1.2)";
-      //   video.style["--ms-transform"] = "scale(1.2)";
-      // }
+    if(order=="screenshots") {
+      slideIndex=0
+      showSlides(card);
+      video.style.width = `${cardConfig[template].card.width}px`;
+      // video.querySelectorAll(".box-art").style.width = `${cardConfig[template].card.width}px`;
+      if(video.querySelector(".mySlides")) {
+        if(video.querySelectorAll(".mySlides").style) {
+          video.querySelectorAll(".mySlides").style.width = `${cardConfig[template].card.width}px`;
+        } else {
+         // video.querySelectorAll(".mySlides")[0].style["min-width"] = `${cardConfig[template].card.width}px`;
+          video.querySelectorAll(".mySlides").forEach(element => {
+            element.style["min-width"] = `${cardConfig[template].card.width}px`;
+          });
+        }
+      } 
+      parentElement.querySelector(".card-footer").style.left = `${cardConfig[template].card.width-81}px`;
+    } else if(template == "template-1") {
       video.style.width = `${cardConfig[template].card.width}px`;
       parentElement.querySelector(".card-footer").style.left = `${cardConfig[template].card.width-81}px`;
     } else if(template == "template-4" && cardIndex!=0) {
-      // if(video.paused == false) {
-      //   video.style.transform = "scale(1.2)";
-      //   video.style["-webkit-transform"] = "scale(1.2)";
-      //   video.style["--ms-transform"] = "scale(1.2)";
-      // }
       video.style.width = `${cardConfig[template].card.width}px`;
       parentElement.querySelector(".card-footer").style.left = `${cardConfig[template].card.width-65}px`;
-    } else if(template == "template-3") {
-      if(video.paused == false) {
-        video.style.transform = "scale(1.2)";
-        video.style["-webkit-transform"] = "scale(1.2)";
-        video.style["--ms-transform"] = "scale(1.2)";
-      }
+    } else if(template == "template-3" && video.paused == false) {
+      video.style.transform = "scale(1.2)";
+      video.style["-webkit-transform"] = "scale(1.2)";
+      video.style["--ms-transform"] = "scale(1.2)";
+      // card.querySelector(".card-footer").style.bottom="0px"
+      // setTimeout(() => {
+      //   card.querySelector(".card-footer").style.bottom="-200px"
+      // }, 1000);
     }
-    if(template=="template-4" && cardIndex!=0) {
+    if(template=="template-4" && cardIndex!=0 && video.play) {
       video.play();
-    } else if(template!="template-4") {
+    } else if(template!="template-4" && order != "screenshots" && video.play) {
       video.play();
     }
   //} 
   // else if(order=="screenShots") {
   //   let boxArt = ""
-  //   boxArt = card.querySelector(".box-art").forEach(element => {
+  //   boxArt = card.querySelector(".screenshots").forEach(element => {
   //     element.style.width = `${cardConfig[template].card.width}px`;
   //   });
   //   parentElement.querySelector(".card-footer").style.left = `${cardConfig[template].card.width-81}px`;
   // }
 }
 
-const pauseVideo = (video,template,card,cardIndex) => {
+const pauseVideo = (video,template,card,cardIndex,order) => {
   if(template == "template-1") {
-   
-    video.load()
     //video.style.width = "";
-     video.style.width = `${(cardConfig[template].card.width/2)-10}px`;
+    video.style.width = `${(cardConfig[template].card.width/2)-13}px`;
+    if(video.querySelector(".box-art")) {
+      if(video.querySelectorAll(".box-art").style) {
+        video.querySelectorAll(".box-art").style.width = `${(cardConfig[template].card.width/2)-10}px`;
+      } else {
+        video.querySelectorAll(".box-art").forEach(element => {
+          element.style.width = `${(cardConfig[template].card.width/2)-10}px`;
+          element.style["min-width"] = `${(cardConfig[template].card.width/2)-10}px`;
+        });
+        // video.querySelectorAll(".box-art")[0].style.width = `${(cardConfig[template].card.width/2)-10}px`;
+        // video.querySelectorAll(".box-art")[0].style["min-width"] = `${(cardConfig[template].card.width/2)-10}px`;
+      }
+     
+    } else {
+      video.load?video.load():"";
+    }
+    
     // video.style.transform = "scale(1.0)";
     // video.style["-webkit-transform"] = "scale(1.0)"; 
     // video.style["--ms-transform"] = "scale(1.0)";
     card.querySelector(".card-footer").style.left=`${(cardConfig[template].card.width/2)-10}px`;
   } else if(template == "template-3") {
     video.pause();
+    card.querySelector(".card-footer").setAttribute("data-status","up")
+    card.querySelector("canvas").style.opacity=1
+    card.querySelector(".card-footer").setAttribute("data-status","up")
   } else if(template == "template-4" && cardIndex != 0) {
     video.load()
-    video.style.width = `${(cardConfig[template].card.width/2)-10}px`;
+    video.style.width = `${(cardConfig[template].card.width/2)-13}px`;
     video.style.transform = "scale(1.0)";
     video.style["-webkit-transform"] = "scale(1.0)"; 
     video.style["--ms-transform"] = "scale(1.0)";
@@ -441,11 +466,13 @@ const pauseVideo = (video,template,card,cardIndex) => {
 const screenShotsHandler = (selectedUrl, videoElement, order, element) => {
   if(order=="image") {
     videoElement.poster = selectedUrl;
-    videoElement.load();
     videoElement.src="";
     videoElement.style.transform = "scale(1.0)";
-    videoElement.style["-webkit-transform"] = "scale(1.0)"; 
-    videoElement.style["--ms-transform"] = "scale(1.0)";
+    // videoElement.style["-webkit-transform"] = "scale(1.0)"; 
+    // videoElement.style["--ms-transform"] = "scale(1.0)";
+    // setTimeout(() => {
+    //   videoElement.load();
+    // }, 5000);
   } else if(order=="video") {
     videoElement.src = selectedUrl; 
     videoElement.style.transform = "scale(1.2)";
@@ -476,55 +503,97 @@ const screenShotsScrollHandler = (element,order) => {
   }
 }
 
+function showSlides(element) {
+ setInterval(() => {
+  var i;
+  var slides = element.querySelectorAll(".mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  slides[slideIndex-1].style.display = "block";
+  // slides[slideIndex-1].style.width = "266px";
+  // slides[slideIndex-1].style.height = "140px";
+  slides[slideIndex-1].querySelector('img').style.width="266px";
+  slides[slideIndex-1].querySelector('img').style.height="140px";
+ }, 2000);
+}
+var timeout;
+
+const moveHandler = (element) => {
+  element.querySelector(".card-footer").setAttribute("data-status","up")
+  element.querySelector("canvas").style.opacity=1
+  clearTimeout(timeout);
+  timeout = setTimeout(() => {
+    if(!element.querySelector("video").paused){
+      element.querySelector(".card-footer").setAttribute("data-status","down")
+      element.querySelector("canvas").style.opacity=0
+    }
+  }, 3000);
+}
+
 const getRcBlocks = (recData, index, recBlock, template, noOfCards) => {
   let cards = ""
   if(template == "template-1") {
+  //   <div
+  //   class="screenshots-wrapper2"
+  //   id="bgvidContainer${index}Card${cardIndex}"
+  //   style="display:flex;overflow:auto;scroll-behavior: smooth;"
+  //   onmouseover="playVideo(bgvidContainer${index}Card${cardIndex},'${template}',this,${cardIndex},'screenshots')"
+  // >
+  //   ${screenshots}
+  // </div>
     recData.forEach((record,cardIndex) => {
-      let screenshots = `<div class="box-art" style="background-image: url(${record.img_src});"></div>`;
+      // let screenshots = `<div class="box-art" style="background-image: url(${record.img_src});"></div>`;
+      let screenShots = `<div class="mySlides fade"><img src="${record.img_src}" style="width:100%"></div>`;
       if(record.screenshots) {
         record.screenshots.forEach(element => {
-          screenshots+= `<div class="box-art" style="background-image: url(${element});"></div>`
+          // screenshots+= `<div class="box-art" style="background-image: url(${element});"></div>`
+          screenShots+=`<div class="mySlides fade">
+          <img src="${element}">
+        </div>`
         }); 
       }
-      cards+= `<div class="card" style="min-width:${cardConfig[template].card.width}px;max-width:${cardConfig[template].card.width}px;height:${cardConfig[template].card.height}px;background:${cardConfig[template].card.background}" onmouseleave="pauseVideo(bgvidContainer${index}Card${cardIndex},'${template}',this)">
-     ${record.on_sale ? '<div class="on-sale">SALE</div>':""}
-      <div class="card-body">
-        ${record.clip ? 
-          `<video 
-            poster="${record.img_src ? record.img_src : "assets/no-image.jpeg"}" 
-            src="${record.clip }" 
-            id="bgvidContainer${index}Card${cardIndex}"
-            playsinline muted loop
-            onerror="this.onerror=null;this.src='assets/no-image.jpeg';"
-            onmouseover="playVideo(bgvidContainer${index}Card${cardIndex},'${template}',this)">
-          </video>` 
-        :`<div
-            id="bgvidContainer${index}Card${cardIndex}" 
-            onmouseover="playVideo(bgvidContainer${index}Card${cardIndex},'${template}',this,${cardIndex},'screenShots')"
-          >
-            ${screenshots}
+      cards+= 
+      `<div class="card" 
+        style="min-width:${cardConfig[template].card.width}px;max-width:${cardConfig[template].card.width}px;height:${cardConfig[template].card.height}px;background:${cardConfig[template].card.background}" 
+        onmouseleave= "pauseVideo(bgvidContainer${index}Card${cardIndex},'${template}',this)"
+      >
+        <div class="card-body">
+        ${record.on_sale ? '<div class="on-sale">SALE</div>':""}
+          ${record.clip ? 
+            `<video 
+              poster="${record.img_src ? record.img_src : "assets/no-image.jpeg"}" 
+              src="${record.clip }" 
+              id="bgvidContainer${index}Card${cardIndex}"
+              playsinline muted loop
+              onerror="this.onerror=null;this.src='assets/no-image.jpeg';"
+              onmouseover="playVideo(bgvidContainer${index}Card${cardIndex},'${template}',this)">
+            </video>` 
+          :`
+
+          <div class="slideshow-container" id="bgvidContainer${index}Card${cardIndex}" onmouseover="playVideo(bgvidContainer${index}Card${cardIndex},'${template}',this,${cardIndex},'screenshots')">
+            ${screenShots}
           </div>`
-        }
-        <div class="card-footer" style="left:${(cardConfig[template].card.width/2)-7}px">
-          ${record.price ? 
-            `<div class="price">
+          }
+          <div class="card-footer" style="left:${(cardConfig[template].card.width/2)-7}px">
+            <div class="price">
               ${record.prev_price ? `<span class="prev-price">${record.prev_price}</span>` : ""}
               ${record.price}
-            </div>`
-          : ""}
-          <i 
-            class="fa fa-shopping-cart" 
-            aria-hidden="true" 
-            onclick="addToCartHandler('${record.product_id}',${cardIndex},'single')"
-          ></i>
+            </div>
+            <i class="fa fa-shopping-cart" 
+              aria-hidden="true" 
+              onclick="addToCartHandler('${record.product_id}',${cardIndex},'single')"
+            ></i>
+          </div>
         </div>
-      </div>
-      <div class="card-header">
-        <a class="title" href="${record.product_page}" target=_blank>${record.title ? record.title : ""}</a>
-        <div class="short-text">${record.short_text ? record.short_text : ""}</div>
-        <div class="long-text">${record.long_text ? record.long_text : ""}</div>
-      </div>
-    </div>`
+        <div class="card-header">
+          <a class="title" href="${record.product_page}" target=_blank>${record.title ? record.title : ""}</a>
+          <div class="short-text">${record.short_text ? record.short_text : ""}</div>
+          <div class="long-text">${record.long_text ? record.long_text : ""}</div>
+        </div>
+      </div>`
     });
   } else if(template == "template-2") {
     recData.forEach((record, cardIndex) => {
@@ -555,7 +624,7 @@ const getRcBlocks = (recData, index, recBlock, template, noOfCards) => {
       } else {
         screenshots=""
       }
-      cards += `<div class="card-wrapper" onmouseover="playVideo(bgvidContainer${index}Card${cardIndex},'${template}',this)" onmouseleave="pauseVideo(bgvidContainer${index}Card${cardIndex},'${template}'),this" >
+      cards += `<div class="card-wrapper" onmouseover="playVideo(bgvidContainer${index}Card${cardIndex},'${template}',this)" onmouseleave="pauseVideo(bgvidContainer${index}Card${cardIndex},'${template}'),this" onmousemove="moveHandler(this)" >
       <canvas class="canvas"></canvas>
       <div class="card-body">
         <div class="card-header">
@@ -564,7 +633,7 @@ const getRcBlocks = (recData, index, recBlock, template, noOfCards) => {
           <div class="short-text">${record.short_text ? record.short_text : ""}</div>
           <div class="long-text">${record.long_text ? record.long_text : ""}</div>
         </div>
-        <div class="card-footer" style="width:${cardConfig[template].card.width-60}px">
+        <div class="card-footer" data-status="up" style="width:${cardConfig[template].card.width-60}px" onmouseover="()=>this.style.bottom=0">
           <div class="add-to-cart"><i class="fa fa-shopping-cart" aria-hidden="true" style="margin-right:5px;font-size:17px"  onclick="addToCartHandler('${record.product_id}',${cardIndex},'single')"></i></div> 
           ${record.price ? `<div class="right-section">${record.on_sale ?"<div class='on-sale'>ON SALE</div>" : ""}<div class="price">${record.price}</div></div>`: ""}
           ${screenshots != "" ? `<div class="screenshots-wrapper" id="screenShotsContainer${index}Card${cardIndex}">
@@ -584,8 +653,8 @@ const getRcBlocks = (recData, index, recBlock, template, noOfCards) => {
   } else if(template == "template-4") {
     recData.forEach((record, cardIndex) => {
     cards+= `<div class="card"  onmouseleave="pauseVideo(bgvidContainer${index}Card${cardIndex},'${template}',this,${cardIndex})" style="min-width:${cardConfig[template].card.width}px;max-width:${cardConfig[template].card.width}px;height:${cardConfig[template].card.height}px;background:${cardConfig[template].card.background}">
-    ${record.on_sale ? '<div class="on-sale">SALE</div>':""}  
     <div class="card-body"> 
+       ${record.on_sale ? '<div class="on-sale">SALE</div>':""}  
         <video poster="${record.img_src}" src="${record.clip}" id="bgvidContainer${index}Card${cardIndex}" playsinline muted loop  onmouseover="playVideo(bgvidContainer${index}Card${cardIndex},'${template}',this,${cardIndex})"></video> 
         <div class="card-footer" style="left:${cardIndex!=0 ? (cardConfig[template].card.width/2)+5 : (cardConfig[template].card.width/2)-7}px">
          ${ cardIndex != 0 ? `<label class="checkbox-label">

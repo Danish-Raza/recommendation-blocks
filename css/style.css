@@ -10,6 +10,7 @@ body {
     overflow: auto;
     scroll-behavior: smooth;
 }
+
 .container-wrapper {
     display: flex;
     width: 100%;
@@ -23,10 +24,20 @@ body {
     background: black;
     border-radius: 10px;
 }
-.container::-webkit-scrollbar-track .template-3 .screenshots-wrapper .screenshots::-webkit-scrollbar-track {
+.container::-webkit-scrollbar-track .template-3 .screenshots-wrapper .screenshots::-webkit-scrollbar-track{
     background: transparent;
 }
-
+.screenshots-wrapper2::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+}
+.screenshots-wrapper2::-webkit-scrollbar-thumb{
+    background: black;
+    border-radius: 10px;
+}
+.screenshots-wrapper2::-webkit-scrollbar-track {
+    background: transparent;
+}
 .container, .screenshots {
     scrollbar-width:none;
 }
@@ -76,11 +87,13 @@ body {
     /* overflow: hidden; */
 }
 .template-1 .card .card-body, .template-4 .card .card-body {
-    width: 50%;
+    width: 120px;
     display: flex;
     align-items: flex-end;
     height: 100%;
     z-index: 1;
+    position: relative;
+    transition: width 0.3s ;
 }
 .template-1 .card .card-body:hover, .template-4 .card:not(:first-child) .card-body:hover {
     width: 100%;
@@ -94,7 +107,7 @@ body {
     right: 0;
 }
 .template-1  video, .template-4  video {
-    width: 95%;
+    width: 99%;
     height: 100%;
     object-fit: cover;
     object-position: center;
@@ -113,19 +126,19 @@ body {
 .template-1 .on-sale ,.template-4 .on-sale {
     position: absolute;
     z-index: 2;
-    height: 40px;
-    width: 40px;
+    height: 17px;
+    width: 35px;
     background-color: #FF3E54;
     font-size: 10px;
     color: #FFFFFF;
     font-weight: bold;
-    border-radius: 50%;
+    border-radius: 2px;
     display: flex;
     align-items: center;
     justify-content: center;
-    transform: rotate(45deg);
-    left: -12px;
-    top: -12px;
+    right: -3px;
+    /* transition: right 0.3s; */
+    top: 5px;
 }
 .template-1 .on-sale:hover +.card-body , .template-4 .on-sale:hover +.card-body {
     width: 100%;
@@ -279,7 +292,9 @@ body {
 }
 .template-3 .card-wrapper {
     position: relative;
-    margin: 0 15px;
+    /* margin: 0 15px; */
+    margin-right: 15px;
+    overflow: hidden;
 }
 .template-2 .card-body {
     display: none;
@@ -373,12 +388,34 @@ body {
     background: linear-gradient(to right, black 10%, transparent 95%),linear-gradient( transparent 56%, black);
 }
 
+
 .template-3 .card-wrapper:hover .canvas {
-    opacity: 0.9;
+    background: linear-gradient(to top, black 4%, transparent 65%);
+}
+.template-3 .card-header {
+    position: relative;
+    left: 0px;
+    transition: left 0.6s;
+}
+.template-3 .card-wrapper:hover .canvas +.card-body .card-header{
+    left: -400px;
+    transition: left 0.6s;
+}
+
+/* 
+.template-3 .card-wrapper:nth-child(2):hover .canvas {
+    opacity: 0;
     -webkit-transition: opacity 300ms linear;
     -ms-transition: opacity 300ms linear;
     transition: opacity 300ms linear;
+} */
+.template-3 .card-wrapper:nth-child(1):hover .canvas +.card-body {
+    /* display: none; */
 }
+
+
+
+
 .template-3 .card ,.template-3 .box-art {
     width: 536px;
     height: 358px;
@@ -422,7 +459,18 @@ body {
 .template-3 .card-footer {
     display: flex;
     width: 476px;
+    position: relative;
+    bottom: 0;
+    transition: bottom 0.3s;
     align-items: flex-end;
+}
+.template-3 .card-footer[data-status=down]{
+    bottom: -100px;
+    transition: bottom 0.3s;
+}
+.template-3 .card-footer[data-status=up]{
+    bottom: 0px;
+    transition: bottom 0.3s;
 }
 .template-3 .card-footer .right-section {
     height: 40px;
@@ -433,9 +481,10 @@ body {
     align-items: center;
     justify-content: center;
     color: white;
-    background-image: linear-gradient(to bottom, #F5515F, #9F041B);
-    border-top-right-radius: 7px;
-    border-bottom-right-radius: 7px;
+    /* background-image: linear-gradient(to bottom, #F5515F, #9F041B); */
+    background: #D0021B;
+    /* border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px; */
 }
 
 .template-3 .card-footer .right-section .price  {
@@ -488,9 +537,10 @@ body {
     color: white;
     align-items: center;
     justify-content: center;
-    background-image: linear-gradient(to right, #F5515F, #9F041B);
-    border-top-left-radius: 7px;
-    border-bottom-left-radius: 7px;
+    /* background-image: linear-gradient(to right, #F5515F, #9F041B); */
+    background: #A31224;
+    /* border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px; */
     cursor: pointer;
 }
 
@@ -588,3 +638,77 @@ body {
     color: white;
     cursor: pointer;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  min-width: 120px;
+  height: 140px;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {transform: translateX(0px);} 
+  to {transform: translateX(266px);}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+.card-body {box-sizing: border-box;}
