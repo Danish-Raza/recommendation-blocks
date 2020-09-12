@@ -7,10 +7,45 @@ var blockData = {
       "clip":"assets/My Time At Portia.webm",
       "img_src": "https://cdn.shopify.com/s/files/1/0280/6457/9655/products/My_Time_at_Portia_Xb1_Cov.jpg?v=1592981794",
       "price": "$5.00",
+     
       "product_id": 4545-91,
       "short_text":"lorem ipsum",
       "long_text":"Shoot enemies and gather amazing loot to upgrade and customize your character as you see fit.",
       "title": "My Time at Portia"
+    },
+    {
+      "discount": "",
+      "handle": "bless-online-win",
+      "price": "$10.00",
+      "on_sale":true,
+      "prev_price":"$20.00",
+      "img_src": "https://cdn.shopify.com/s/files/1/0280/6457/9655/products/BLESS_ONLINE_win_cov.jpg?v=1592984940",
+      "product_page":"https://www.amazon.in/b?ie=UTF8&node=21345254031",
+      "screenshots":[
+        "assets/bless/9cd033c9851d402daca72283c90bb5dc.jpg",
+        "assets/bless/51ac315aaaca441e881c69679f9b0bd3.jpg",
+        "assets/bless/2750f121692e4532a1d160001a5f11b5.jpg",
+      ],
+      // "clip":"assets/Ni no Kuni II Revenant Kingdom - Rmp4.webm",
+      "product_id": 200504,
+      "title": "BLESS ONLINE"
+    },
+    {
+      "discount": "",
+      "handle": "atelier-lulua-the-scion-of-arland-digital-deluxe-edition-win",
+      "img_src": "https://cdn.shopify.com/s/files/1/0280/6457/9655/products/Atelier_Lulua_The_Scion_of_Arland_ps4_win_ns_deluxe_cov_601d6f28-39b5-4f7d-8738-c085b3560765.jpg?v=1592984407",
+      "price": "$20.00",
+      "product_id": 681155,
+      // "clip":"assets/sample2.webm",
+      "screenshots":[
+        "assets/atelier/0b73d0511d5f4f6191137d7811e024cb.jpg",
+        "assets/atelier/78a2c94282434079b2da314c1010e4ce.jpg",
+        "assets/atelier/1403771e2d8241b9ba972aada64777eb.jpg",
+        "assets/atelier/cfc383aa99bf4340a282ce3bf94e60c5.jpg",
+        "assets/atelier/d0da9c8817cf4a05b884f830e597805d.jpg"
+      ],
+      "product_page":"https://www.amazon.in/b?ie=UTF8&node=21345254031",
+      "title": "Atelier Lulua: The Scion of Arland - Digital Deluxe Edition"
     },
     {
       "discount": "",
@@ -27,38 +62,13 @@ var blockData = {
     {
       "discount": "",
       "on_sale":true,
-    "prev_price":"$15.00",
+      "prev_price":"$15.00",
       "handle": "atelier-lulua-the-scion-of-arland-digital-deluxe-edition-win",
       "product_page":"https://www.amazon.in/b?ie=UTF8&node=21345254031",
       "img_src": "https://cdn.shopify.com/s/files/1/0280/6457/9655/products/Atelier_Lulua_The_Scion_of_Arland_ps4_win_ns_deluxe_cov_601d6f28-39b5-4f7d-8738-c085b3560765.jpg?v=1592984407",
       "product_id": 681153,
       "price": "$10.00",
       "clip":"assets/sample2.webm",
-      "title": "Atelier Lulua: The Scion of Arland - Digital Deluxe Edition"
-    },
-    {
-      "discount": "",
-      "handle": "bless-online-win",
-      "img_src": "https://cdn.shopify.com/s/files/1/0280/6457/9655/products/BLESS_ONLINE_win_cov.jpg?v=1592984940",
-      "product_page":"https://www.amazon.in/b?ie=UTF8&node=21345254031",
-      "screenshots":[
-        "assets/bless/9cd033c9851d402daca72283c90bb5dc.jpg",
-        "assets/bless/51ac315aaaca441e881c69679f9b0bd3.jpg",
-        "assets/bless/2750f121692e4532a1d160001a5f11b5.jpg",
-      ],
-      "price": "$5.00",
-      "clip":"assets/Ni no Kuni II Revenant Kingdom - Rmp4.webm",
-      "product_id": 200504,
-      "title": "BLESS ONLINE"
-    },
-    {
-      "discount": "",
-      "handle": "atelier-lulua-the-scion-of-arland-digital-deluxe-edition-win",
-      "img_src": "https://cdn.shopify.com/s/files/1/0280/6457/9655/products/Atelier_Lulua_The_Scion_of_Arland_ps4_win_ns_deluxe_cov_601d6f28-39b5-4f7d-8738-c085b3560765.jpg?v=1592984407",
-      "price": "$20.00",
-      "product_id": 681155,
-      "clip":"assets/sample2.webm",
-      "product_page":"https://www.amazon.in/b?ie=UTF8&node=21345254031",
       "title": "Atelier Lulua: The Scion of Arland - Digital Deluxe Edition"
     },
     {
@@ -375,24 +385,16 @@ window.onload = () => {
 
 window.onresize = paginationHandler;
 var slideIndex = 0;
+
 const playVideo = (video,template,card,cardIndex,order) => {
   let parentElement = card.parentNode; 
-  // if(video.readyState == 4) {
     if(order=="screenshots") {
-      slideIndex=0
-      showSlides(card);
       video.style.width = `${cardConfig[template].card.width}px`;
-      // video.querySelectorAll(".box-art").style.width = `${cardConfig[template].card.width}px`;
-      if(video.querySelector(".mySlides")) {
-        if(video.querySelectorAll(".mySlides").style) {
-          video.querySelectorAll(".mySlides").style.width = `${cardConfig[template].card.width}px`;
-        } else {
-         // video.querySelectorAll(".mySlides")[0].style["min-width"] = `${cardConfig[template].card.width}px`;
-          video.querySelectorAll(".mySlides").forEach(element => {
-            element.style["min-width"] = `${cardConfig[template].card.width}px`;
-          });
-        }
-      } 
+      video.querySelectorAll(".box-art").forEach(element => {
+        element.style["min-width"] = `${cardConfig[template].card.width}px`;
+        element.style["max-width"] = `${cardConfig[template].card.width}px`;
+      });
+      showSlides(video,cardConfig[template].card.width);
       parentElement.querySelector(".card-footer").style.left = `${cardConfig[template].card.width-81}px`;
     } else if(template == "template-1") {
       video.style.width = `${cardConfig[template].card.width}px`;
@@ -404,61 +406,52 @@ const playVideo = (video,template,card,cardIndex,order) => {
       video.style.transform = "scale(1.2)";
       video.style["-webkit-transform"] = "scale(1.2)";
       video.style["--ms-transform"] = "scale(1.2)";
-      // card.querySelector(".card-footer").style.bottom="0px"
-      // setTimeout(() => {
-      //   card.querySelector(".card-footer").style.bottom="-200px"
-      // }, 1000);
     }
-    if(template=="template-4" && cardIndex!=0 && video.play) {
+    if(video.readyState == 4 && template == "template-4" && cardIndex!=0) {
       video.play();
-    } else if(template!="template-4" && order != "screenshots" && video.play) {
+    } else if( video.readyState == 4 && template!="template-4" && order != "screenshots") {
       video.play();
     }
-  //} 
-  // else if(order=="screenShots") {
-  //   let boxArt = ""
-  //   boxArt = card.querySelector(".screenshots").forEach(element => {
-  //     element.style.width = `${cardConfig[template].card.width}px`;
-  //   });
-  //   parentElement.querySelector(".card-footer").style.left = `${cardConfig[template].card.width-81}px`;
-  // }
+}
+function showSlides(element,width) {
+  clearInterval(timeout);
+  slideIndex=0;
+  timeout = setInterval(() => {
+    var slides = element.querySelectorAll(".box-art");
+    for (i = 0; i < slideIndex; i++) {
+      slides[i].style.left = `0px`;
+    }
+    slideIndex++;
+    if (slideIndex >= slides.length) {
+      slides[slideIndex-1].style.left = `0px`;;  
+      slideIndex = 1
+    }
+    slides[slideIndex].style.left = `${-1 * width * (slideIndex)}px`;
+   }, 2000);
 }
 
 const pauseVideo = (video,template,card,cardIndex,order) => {
+  clearInterval(timeout)
   if(template == "template-1") {
-    //video.style.width = "";
     video.style.width = `${(cardConfig[template].card.width/2)-13}px`;
     if(video.querySelector(".box-art")) {
-      if(video.querySelectorAll(".box-art").style) {
-        video.querySelectorAll(".box-art").style.width = `${(cardConfig[template].card.width/2)-10}px`;
-      } else {
-        video.querySelectorAll(".box-art").forEach(element => {
-          element.style.width = `${(cardConfig[template].card.width/2)-10}px`;
-          element.style["min-width"] = `${(cardConfig[template].card.width/2)-10}px`;
-        });
-        // video.querySelectorAll(".box-art")[0].style.width = `${(cardConfig[template].card.width/2)-10}px`;
-        // video.querySelectorAll(".box-art")[0].style["min-width"] = `${(cardConfig[template].card.width/2)-10}px`;
-      }
-     
+      video.querySelectorAll(".box-art").forEach(element => {
+        element.style.width = `${(cardConfig[template].card.width/2)-10}px`;
+        element.style["min-width"] = `${(cardConfig[template].card.width/2)-10}px`;
+        element.style.left = 0;
+      });
     } else {
-      video.load?video.load():"";
+      video.load ? video.load() : "" ;
     }
-    
-    // video.style.transform = "scale(1.0)";
-    // video.style["-webkit-transform"] = "scale(1.0)"; 
-    // video.style["--ms-transform"] = "scale(1.0)";
     card.querySelector(".card-footer").style.left=`${(cardConfig[template].card.width/2)-10}px`;
   } else if(template == "template-3") {
     video.pause();
-    card.querySelector(".card-footer").setAttribute("data-status","up")
-    card.querySelector("canvas").style.opacity=1
-    card.querySelector(".card-footer").setAttribute("data-status","up")
+    // video.querySelector(".card-footer").setAttribute("data-status","up")
+    // video.querySelector("canvas").style.opacity=1
+    // video.querySelector(".card-footer").setAttribute("data-status","up")
   } else if(template == "template-4" && cardIndex != 0) {
-    video.load()
+    video.load();
     video.style.width = `${(cardConfig[template].card.width/2)-13}px`;
-    video.style.transform = "scale(1.0)";
-    video.style["-webkit-transform"] = "scale(1.0)"; 
-    video.style["--ms-transform"] = "scale(1.0)";
     card.querySelector(".card-footer").style.left=`${(cardConfig[template].card.width/2)+4}px`;
   }
 }
@@ -468,11 +461,6 @@ const screenShotsHandler = (selectedUrl, videoElement, order, element) => {
     videoElement.poster = selectedUrl;
     videoElement.src="";
     videoElement.style.transform = "scale(1.0)";
-    // videoElement.style["-webkit-transform"] = "scale(1.0)"; 
-    // videoElement.style["--ms-transform"] = "scale(1.0)";
-    // setTimeout(() => {
-    //   videoElement.load();
-    // }, 5000);
   } else if(order=="video") {
     videoElement.src = selectedUrl; 
     videoElement.style.transform = "scale(1.2)";
@@ -503,22 +491,6 @@ const screenShotsScrollHandler = (element,order) => {
   }
 }
 
-function showSlides(element) {
- setInterval(() => {
-  var i;
-  var slides = element.querySelectorAll(".mySlides");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}
-  slides[slideIndex-1].style.display = "block";
-  // slides[slideIndex-1].style.width = "266px";
-  // slides[slideIndex-1].style.height = "140px";
-  slides[slideIndex-1].querySelector('img').style.width="266px";
-  slides[slideIndex-1].querySelector('img').style.height="140px";
- }, 2000);
-}
 var timeout;
 
 const moveHandler = (element) => {
@@ -536,30 +508,15 @@ const moveHandler = (element) => {
 const getRcBlocks = (recData, index, recBlock, template, noOfCards) => {
   let cards = ""
   if(template == "template-1") {
-  //   <div
-  //   class="screenshots-wrapper2"
-  //   id="bgvidContainer${index}Card${cardIndex}"
-  //   style="display:flex;overflow:auto;scroll-behavior: smooth;"
-  //   onmouseover="playVideo(bgvidContainer${index}Card${cardIndex},'${template}',this,${cardIndex},'screenshots')"
-  // >
-  //   ${screenshots}
-  // </div>
     recData.forEach((record,cardIndex) => {
-      // let screenshots = `<div class="box-art" style="background-image: url(${record.img_src});"></div>`;
-      let screenShots = `<div class="mySlides fade"><img src="${record.img_src}" style="width:100%"></div>`;
+      let screenShots = `<div class="box-art" style="background-image: url(${record.img_src ? record.img_src : "assets/no-image.jpeg"});position:relative;min-width:${(cardConfig[template].card.width/2)-10}px;max-width:${(cardConfig[template].card.width/2-10)}px;height:${cardConfig[template].card.height}px;left:0"></div>`;
       if(record.screenshots) {
-        record.screenshots.forEach(element => {
-          // screenshots+= `<div class="box-art" style="background-image: url(${element});"></div>`
-          screenShots+=`<div class="mySlides fade">
-          <img src="${element}">
-        </div>`
+        record.screenshots.forEach((element,sIndex) => {
+          screenShots+=`<div class="box-art" style="background-image: url(${element});position:relative;min-width:${(cardConfig[template].card.width/2)-10}px;max-width:${(cardConfig[template].card.width/2)-10}px;height:${cardConfig[template].card.height}px;left:0"></div>`
         }); 
       }
       cards+= 
-      `<div class="card" 
-        style="min-width:${cardConfig[template].card.width}px;max-width:${cardConfig[template].card.width}px;height:${cardConfig[template].card.height}px;background:${cardConfig[template].card.background}" 
-        onmouseleave= "pauseVideo(bgvidContainer${index}Card${cardIndex},'${template}',this)"
-      >
+      `<div class="card" style="min-width:${cardConfig[template].card.width}px;max-width:${cardConfig[template].card.width}px;height:${cardConfig[template].card.height}px;background:${cardConfig[template].card.background}" onmouseleave= "pauseVideo(bgvidContainer${index}Card${cardIndex},'${template}',this)">
         <div class="card-body">
         ${record.on_sale ? '<div class="on-sale">SALE</div>':""}
           ${record.clip ? 
@@ -572,7 +529,6 @@ const getRcBlocks = (recData, index, recBlock, template, noOfCards) => {
               onmouseover="playVideo(bgvidContainer${index}Card${cardIndex},'${template}',this)">
             </video>` 
           :`
-
           <div class="slideshow-container" id="bgvidContainer${index}Card${cardIndex}" onmouseover="playVideo(bgvidContainer${index}Card${cardIndex},'${template}',this,${cardIndex},'screenshots')">
             ${screenShots}
           </div>`
@@ -582,10 +538,7 @@ const getRcBlocks = (recData, index, recBlock, template, noOfCards) => {
               ${record.prev_price ? `<span class="prev-price">${record.prev_price}</span>` : ""}
               ${record.price}
             </div>
-            <i class="fa fa-shopping-cart" 
-              aria-hidden="true" 
-              onclick="addToCartHandler('${record.product_id}',${cardIndex},'single')"
-            ></i>
+            <i class="fa fa-shopping-cart" aria-hidden="true" onclick="addToCartHandler('${record.product_id}',${cardIndex},'single')"></i>
           </div>
         </div>
         <div class="card-header">
