@@ -36,7 +36,7 @@ var blockData = {
       "img_src": "https://cdn.shopify.com/s/files/1/0280/6457/9655/products/Atelier_Lulua_The_Scion_of_Arland_ps4_win_ns_deluxe_cov_601d6f28-39b5-4f7d-8738-c085b3560765.jpg?v=1592984407",
       "price": "$20.00",
       "product_id": 681155,
-      // "clip":"assets/sample2.webm",
+      //"clip":"assets/sample2.webm",
       "screenshots":[
         "assets/atelier/0b73d0511d5f4f6191137d7811e024cb.jpg",
         "assets/atelier/78a2c94282434079b2da314c1010e4ce.jpg",
@@ -52,7 +52,7 @@ var blockData = {
       "handle": "ni-no-kuni-2-digital-princes-edition-win",
       "product_page":"https://www.amazon.in/b?ie=UTF8&node=21345254031",
       "clip":"assets/Ni no Kuni II Revenant Kingdom - Rmp4.webm",
-      "img_src": "https://cdn.shopify.com/s/files/1/0280/6457/9655/products/Ni_no_Kuni_II_win_prince_cov.png?v=1592984299",
+     "img_src": "https://cdn.shopify.com/s/files/1/0280/6457/9655/products/Ni_no_Kuni_II_win_prince_cov.png?v=1592984299",
       "product_id": 289742,
       "price": "$10.00",
       "on_sale":true,
@@ -388,6 +388,7 @@ var slideIndex = 0;
 
 const playVideo = (video,template,card,cardIndex,order) => {
   let parentElement = card.parentNode; 
+ 
     if(order=="screenshots") {
       video.style.width = `${cardConfig[template].card.width}px`;
       video.querySelectorAll(".box-art").forEach(element => {
@@ -395,12 +396,15 @@ const playVideo = (video,template,card,cardIndex,order) => {
         element.style["max-width"] = `${cardConfig[template].card.width}px`;
       });
       showSlides(video,cardConfig[template].card.width);
+      parentElement.style.width = `${cardConfig[template].card.width}px`;
       parentElement.querySelector(".card-footer").style.left = `${cardConfig[template].card.width-81}px`;
     } else if(template == "template-1") {
       video.style.width = `${cardConfig[template].card.width}px`;
+      parentElement.style.width = `${cardConfig[template].card.width}px`;
       parentElement.querySelector(".card-footer").style.left = `${cardConfig[template].card.width-81}px`;
     } else if(template == "template-4" && cardIndex!=0) {
       video.style.width = `${cardConfig[template].card.width}px`;
+      parentElement.style.width = `${cardConfig[template].card.width}px`;
       parentElement.querySelector(".card-footer").style.left = `${cardConfig[template].card.width-65}px`;
     } else if(template == "template-3" && video.paused == false) {
       video.style.transform = "scale(1.2)";
@@ -413,18 +417,18 @@ const playVideo = (video,template,card,cardIndex,order) => {
       video.play();
     }
 }
-function showSlides(element,width) {
+const showSlides = (element,width) => {
   clearInterval(timeout);
-  slideIndex=0;
+  slideIndex = 0;
   timeout = setInterval(() => {
     var slides = element.querySelectorAll(".box-art");
     for (i = 0; i < slideIndex; i++) {
-      slides[i].style.left = `0px`;
+      slides[i].style.left = 0;
     }
     slideIndex++;
     if (slideIndex >= slides.length) {
-      slides[slideIndex-1].style.left = `0px`;;  
-      slideIndex = 1
+      slides[slideIndex-1].style.left = 0;
+      slideIndex = 0
     }
     slides[slideIndex].style.left = `${-1 * width * (slideIndex)}px`;
    }, 2000);
@@ -443,15 +447,14 @@ const pauseVideo = (video,template,card,cardIndex,order) => {
     } else {
       video.load ? video.load() : "" ;
     }
+    card.querySelector(".card-body").style.width= `${(cardConfig[template].card.width/2)-10}px`;
     card.querySelector(".card-footer").style.left=`${(cardConfig[template].card.width/2)-10}px`;
   } else if(template == "template-3") {
     video.pause();
-    // video.querySelector(".card-footer").setAttribute("data-status","up")
-    // video.querySelector("canvas").style.opacity=1
-    // video.querySelector(".card-footer").setAttribute("data-status","up")
   } else if(template == "template-4" && cardIndex != 0) {
     video.load();
     video.style.width = `${(cardConfig[template].card.width/2)-13}px`;
+    card.querySelector(".card-body").style.width=`${(cardConfig[template].card.width/2)-13}px`;
     card.querySelector(".card-footer").style.left=`${(cardConfig[template].card.width/2)+4}px`;
   }
 }
@@ -487,7 +490,6 @@ const screenShotsScrollHandler = (element,order) => {
       itagleft.style.color = "white";
       itagRight.style.color = "grey";
     }
-    
   }
 }
 
@@ -513,7 +515,7 @@ const getRcBlocks = (recData, index, recBlock, template, noOfCards) => {
       if(record.screenshots) {
         record.screenshots.forEach((element,sIndex) => {
           screenShots+=`<div class="box-art" style="background-image: url(${element});position:relative;min-width:${(cardConfig[template].card.width/2)-10}px;max-width:${(cardConfig[template].card.width/2)-10}px;height:${cardConfig[template].card.height}px;left:0"></div>`
-        }); 
+        });
       }
       cards+= 
       `<div class="card" style="min-width:${cardConfig[template].card.width}px;max-width:${cardConfig[template].card.width}px;height:${cardConfig[template].card.height}px;background:${cardConfig[template].card.background}" onmouseleave= "pauseVideo(bgvidContainer${index}Card${cardIndex},'${template}',this)">

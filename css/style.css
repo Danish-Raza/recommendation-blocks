@@ -95,7 +95,7 @@ body {
     transition: width 0.3s ;
 }
 .template-1 .card .card-body:hover, .template-4 .card:not(:first-child) .card-body:hover {
-    width: 100%;
+    /* width: 100%; */
 }
 .template-1 .card .card-header, .template-4 .card .card-header {
     z-index: 0;
@@ -164,6 +164,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    background-color: lightgray;
     transition: width 0.3s, left 0.5s;
     -moz-transition: width 0.3s, left 0.5s;
     -ms-transition: width 0.3s, left 0.5s;
@@ -221,16 +222,16 @@ body {
     display: flex;
     overflow: hidden;
     scroll-behavior: smooth;
-    transition: all 0.3s;
+    /* transition: all 0.3s;
     -moz-transition:all 0.3s;
     -ms-transition:all 0.3s;
-    -o-transition:all 0.3s;
+    -o-transition:all 0.3s; */
 }
 .template-1 .box-art {
-    transition: left 0.5s;
-    -moz-transition: left 0.5s;
-    -ms-transition: left 0.5s;
-    -o-transition: left 0.5s
+    transition: left 0.3s;
+    -moz-transition: left 0.3s;
+    -ms-transition: left 0.3s;
+    -o-transition: left 0.3s
 }
 .template-1 .fa-shopping-cart {
     cursor: pointer;
