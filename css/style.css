@@ -93,6 +93,7 @@ body {
     z-index: 1;
     position: relative;
     transition: width 0.3s ;
+    background-color: lightgray;
 }
 .template-1 .card .card-body:hover, .template-4 .card:not(:first-child) .card-body:hover {
     /* width: 100%; */

@@ -447,7 +447,7 @@ const pauseVideo = (video,template,card,cardIndex,order) => {
     } else {
       video.load ? video.load() : "" ;
     }
-    card.querySelector(".card-body").style.width= `${(cardConfig[template].card.width/2)-10}px`;
+    card.querySelector(".card-body").style.width= `${(cardConfig[template].card.width/2)-13}px`;
     card.querySelector(".card-footer").style.left=`${(cardConfig[template].card.width/2)-10}px`;
   } else if(template == "template-3") {
     video.pause();
