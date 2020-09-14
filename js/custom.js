@@ -388,7 +388,6 @@ var slideIndex = 0;
 
 const playVideo = (video,template,card,cardIndex,order) => {
   let parentElement = card.parentNode; 
- 
     if(order=="screenshots") {
       video.style.width = `${cardConfig[template].card.width}px`;
       video.querySelectorAll(".box-art").forEach(element => {
@@ -417,6 +416,7 @@ const playVideo = (video,template,card,cardIndex,order) => {
       video.play();
     }
 }
+
 const showSlides = (element,width) => {
   clearInterval(timeout);
   slideIndex = 0;

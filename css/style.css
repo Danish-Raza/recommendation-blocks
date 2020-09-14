@@ -4,6 +4,7 @@ body {
     background-repeat: no-repeat;
     font-family: Inter;
 }
+
 .container {
     display: flex;
     width: 95%;
@@ -16,46 +17,58 @@ body {
     width: 100%;
     justify-content: center;
 }
+
 .container::-webkit-scrollbar, .template-3 .screenshots-wrapper .screenshots::-webkit-scrollbar {
     width: 0px;
     height: 0px;
 }
+
 .container::-webkit-scrollbar-thumb, .template-3 .screenshots-wrapper .screenshots::-webkit-scrollbar-thumb {
     background: black;
     border-radius: 10px;
 }
+
 .container::-webkit-scrollbar-track .template-3 .screenshots-wrapper .screenshots::-webkit-scrollbar-track{
     background: transparent;
 }
- .slideshow-container::-webkit-scrollbar {
+
+.slideshow-container::-webkit-scrollbar {
     width: 0px;
     height: 0px;
 }
- .slideshow-container::-webkit-scrollbar-thumb{
+
+.slideshow-container::-webkit-scrollbar-thumb{
     background: black;
     border-radius: 10px;
 }
- .slideshow-container::-webkit-scrollbar-track {
+
+.slideshow-container::-webkit-scrollbar-track {
     background: transparent;
 }
+
 .container, .screenshots {
     scrollbar-width:none;
 }
+
 .fa {
     display: flex;
     align-items: center;
 }
+
 .fa-chevron-right {
     margin-left: 10px;
     cursor: pointer !important;
 }
+
 .fa-chevron-left {
     margin-right: 10px;
     cursor: pointer !important;
 }
+
 .content-box {
     padding: 30px 0 30px 0;
 }
+
 .content-title {
     font-size: 14px;
     font-weight: 700;
@@ -65,26 +78,31 @@ body {
     margin-left: 15px;
     margin-right: 15px;
 }
+
 .pagination {
     display: flex;
     justify-content: center;
     font-size: 10px;
     margin-top: 10px;
 }
+
 .pagination i {
     margin: 2px;
     color: lightgray;
     cursor: pointer;
 }
+
 .pagination .active {
     color: black;
 }
+
 .template-1 .card, .template-4 .card {
     margin: 15px 15px;
     display: flex;
     background: white;
     position: relative;
 }
+
 .template-1 .card .card-body, .template-4 .card .card-body {
     width: 120px;
     display: flex;
@@ -92,12 +110,13 @@ body {
     height: 100%;
     z-index: 1;
     position: relative;
-    transition: width 0.3s ;
+    transition: width 0.3s;
+    -moz-transition:width 0.3s;
+    -ms-transition:width 0.3s;
+    -o-transition:width 0.3s;
     background-color: lightgray;
 }
-.template-1 .card .card-body:hover, .template-4 .card:not(:first-child) .card-body:hover {
-    /* width: 100%; */
-}
+
 .template-1 .card .card-header, .template-4 .card .card-header {
     z-index: 0;
     width: 50%;
@@ -106,18 +125,25 @@ body {
     position: absolute;
     right: 0;
 }
+
 .template-1  video, .template-4  video {
     width: 99%;
     height: 100%;
     object-fit: cover;
     object-position: center;
+    transition: width 0.3s;
+    -moz-transition:width 0.3s;
+    -ms-transition:width 0.3s;
+    -o-transition:width 0.3s;
 }
+
 .template-1 video:hover, .template-4 video:hover {
     transition: width 0.3s;
     -moz-transition:width 0.3s;
     -ms-transition:width 0.3s;
     -o-transition:width 0.3s;
 }
+
 .template-1 .on-sale ,.template-4 .on-sale {
     position: absolute;
     z-index: 2;
@@ -132,12 +158,13 @@ body {
     align-items: center;
     justify-content: center;
     right: -3px;
-    /* transition: right 0.3s; */
     top: 5px;
 }
+
 .template-1 .on-sale:hover +.card-body , .template-4 .on-sale:hover +.card-body {
     width: 100%;
 }
+
 .template-1 .card-footer,.template-4 .card-footer {
     display: flex;
     align-items: flex-end;
@@ -171,6 +198,7 @@ body {
     -ms-transition: width 0.3s, left 0.5s;
     -o-transition: width 0.3s, left 0.5s;
 }
+
 .template-1 .title, .template-4 .title {
     font-size: 12px;
     font-weight: bold;
@@ -178,17 +206,20 @@ body {
     display: block;
     text-decoration: none;
 }
+
 .template-1 .short-text, .template-4 .short-text {
     font-size: 11px;
     font-weight: 600;
     color: #4A4A4A;
     margin: 5px 0;
 }
+
 .template-1 .long-text, .template-4 .long-text {
     font-size:  11px;
     font-weight: 400;
     color: #4A4A4A;
 }
+
 .template-1 .card-footer .price {
     font-size: 12px;
     font-weight: 600;
@@ -201,12 +232,14 @@ body {
     flex-direction: column;
     justify-content: center;
 }
+
 .template-1 .prev-price, .template-4 .prev-price {
     color: #9B9B9B;
     font-size: 12px;
     font-weight: 600;
     text-decoration: line-through;
 }
+
 .template-1 .add-to-cart {
     font-size: 8px;
     font-weight: bold;
@@ -219,21 +252,24 @@ body {
     background: #236AAE;
     cursor: pointer;
 }
+
 .template-1 .slideshow-container {
     display: flex;
     overflow: hidden;
     scroll-behavior: smooth;
-    /* transition: all 0.3s;
-    -moz-transition:all 0.3s;
-    -ms-transition:all 0.3s;
-    -o-transition:all 0.3s; */
+    transition: width 0.3s;
+    -moz-transition:width 0.3s;
+    -ms-transition:width 0.3s;
+    -o-transition:width 0.3s;
 }
+
 .template-1 .box-art {
     transition: left 0.3s;
     -moz-transition: left 0.3s;
     -ms-transition: left 0.3s;
     -o-transition: left 0.3s
 }
+
 .template-1 .fa-shopping-cart {
     cursor: pointer;
     color: white;
@@ -245,18 +281,19 @@ body {
     min-height: 20px;
     border-radius: 2px;
 }
+
 .template-4 .card-footer .price:not(:first-child) {
     font-size: 12px;
     font-weight: 600;
     color: #79000F;
     background: white;
     width: 53px;
-    /* height: 15px; */
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
 }
+
 .template-4 .card-footer .price:first-child {
     font-size: 12px;
     font-weight: 600;
@@ -268,6 +305,7 @@ body {
     align-items: center;
     justify-content: center;
 }
+
 .template-4 .add-to-cart {
     font-weight: bold;
     width: 67px;
@@ -284,6 +322,7 @@ body {
     margin: auto 0;
     margin-left: 35px;   
 }
+
 .template-2 .card {
     display: flex;
     background: white;
@@ -294,6 +333,7 @@ body {
     -ms-transition: all 0.3s;
     -o-transition: all 0.3s;
 }
+
 .template-2 .card-wrapper {
     position: relative;
     margin: 0 15px;
@@ -304,13 +344,16 @@ body {
     -ms-transition: all 0.3s;
     -o-transition: all 0.3s;
 }
+
 .template-3 .card-wrapper {
     position: relative;
     margin-right: 15px;
 }
+
 .template-2 .card-body {
     display: none;
 }
+
 .template-2 .card:hover, .template-2 .card-wrapper .card-body:hover +.card{
     filter:  brightness(0.35);
     transition: all 0.3s ease-out;
@@ -319,6 +362,7 @@ body {
     -ms-transition: all 0.3s ease-out;
     -o-transition: all 0.3s ease-out;
 }
+
 .template-2 .card-wrapper:hover .card {
     filter:  brightness(0.35);
     transition: all 0.3s ease-out;
@@ -327,12 +371,14 @@ body {
     -ms-transition: all 0.3s ease-out;
     -o-transition: all 0.3s ease-out;
 }
+
 .template-2 .card-wrapper:hover .card-body {
     display: flex;
     position: absolute;
     z-index: 1;
     justify-content: center;
 }
+
 .template-2 .card-wrapper .title {
     font-size: 12px;
     font-weight: bold;
@@ -341,14 +387,17 @@ body {
     display: block;
     margin-top: 2px;
 }
+
 .template-2 .card-wrapper .short-text {
     font-size: 11px;
     color: #4A4A4A;
     font-weight: 400;
 }
+
 .template-2 .title,.template-2 .short-text {
     text-align: center;
 }
+
 .template-2 .card-body .price {
     font-size: 12px;
     font-weight: 600;
@@ -358,17 +407,20 @@ body {
     align-items: center;
     justify-content: center;
 }
+
 .template-2 .card .box-art {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     transition: all 0.3s;
 }
+
 .template-2 .card-wrapper .long-text {
     font-size:  11px;
     font-weight: 400;
     color: #4A4A4A;
 }
+
 .template-2 .fa-shopping-cart {
     cursor: pointer;
     color: white;
@@ -381,13 +433,15 @@ body {
     border-radius:2px;
     margin-left: 5px;
 }
+
 .template-2 .card-footer {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-.canvas{
+
+.canvas {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -400,10 +454,10 @@ body {
     background: linear-gradient(to right, black 10%, transparent 95%),linear-gradient( transparent 56%, black);
 }
 
-
 .template-3 .card-wrapper:hover .canvas {
     background: linear-gradient(to top, black 4%, transparent 65%);
 }
+
 .template-3 .card-header {
     position: relative;
     left: 0px;
@@ -413,6 +467,7 @@ body {
     -ms-transition: left 0.6s;
     -o-transition: left 0.6s;
 }
+
 .template-3 .card-wrapper:hover .canvas +.card-body .card-header{
     left: -400px;
     transition: left 0.6s;
@@ -433,6 +488,7 @@ body {
     -o-transition: all 0.3s;
     overflow: hidden;
 }
+
 .template-3 .card-body {
     position: absolute;
     width: 100%;
@@ -441,22 +497,26 @@ body {
     z-index: 1;
     overflow: hidden;
 }
+
 .template-3 .title {
   font-size: 20px;
   font-weight: bold;
   color: white;
   text-decoration: none;
 }
+
 .template-3 .short-text {
     font-size: 20px;
     color: white;
 }
+
 .template-3 .long-text {
     font-size: 12px;
     color: #E7E7E7;
     margin-top: 14px;
     margin-bottom: 14px;
 }
+
 .template-3 .card-header .box-art {
     width: 70px;
     height: 91px;
@@ -465,6 +525,7 @@ body {
     background-repeat: no-repeat;
     margin-bottom: 16px;
 }
+
 .template-3 .card-footer {
     display: flex;
     width: 476px;
@@ -476,6 +537,7 @@ body {
     -o-transition:bottom 0.3;
     align-items: flex-end;
 }
+
 .template-3 .card-footer[data-status=down]{
     bottom: -100px;
     transition: bottom 0.3s;
@@ -483,6 +545,7 @@ body {
     -ms-transition: bottom 0.3s;
     -o-transition: bottom 0.3s;
 }
+
 .template-3 .card-footer[data-status=up]{
     bottom: 0px;
     transition: bottom 0.3s;
@@ -490,6 +553,7 @@ body {
     -ms-transition: bottom 0.3s;
     -o-transition: bottom 0.3s;
 }
+
 .template-3 .card-footer .right-section {
     height: 40px;
     min-width: 76px;
@@ -519,6 +583,7 @@ body {
     -ms-transition: all 0.3;
     -o-transition: all 0.3;
 }
+
 .template-3 .screenshots-wrapper {
     display: flex;
     align-items: center;
@@ -528,12 +593,14 @@ body {
     right: 5px;
     width: 82%;
 }
+
 .template-3 .screenshots-wrapper .screenshots {
     overflow: auto;
     display: flex;
     width: 87%;
     scroll-behavior: smooth;
 }
+
 .template-3 .screenshots-wrapper .box-art {
     width: 70px;
     height: 48px;
@@ -545,6 +612,7 @@ body {
     border: 1px solid #979797;
     border-radius: 2px;
 }
+
 .template-3 .add-to-cart {
     min-width: 40px;
     max-width: 40px;
@@ -559,12 +627,12 @@ body {
     cursor: pointer;
 }
 
-/* Styling Checkbox Starts */
 .checkbox-container {
    display: flex;
    justify-content: center;
    margin-top: 8px;
 }
+
 .checkbox-label {
     display: block;
     position: relative;
@@ -642,12 +710,14 @@ body {
   background-color: transparent;
   border-radius: 0;
 }
+
 .left-arrow {
     color: grey;
     cursor: pointer;
     margin: 0 4px;
     transform: rotate(180deg);
 }
+
 .right-arrow {
     margin: 0 4px;
     color: white;
