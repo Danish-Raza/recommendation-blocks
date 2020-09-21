@@ -2,26 +2,26 @@ var blockData = {
   "Other Role-Playing Games": [
     {
       "discount": "",
-      "product_page":"https://www.amazon.in/b?ie=UTF8&node=21345254031",
+      "product_page": "https://www.amazon.in/b?ie=UTF8&node=21345254031",
       "handle": "my-time-at-portia-xb1",
-      "clip":"assets/My Time At Portia.webm",
+      "clip": "assets/My Time At Portia.webm",
       "img_src": "https://cdn.shopify.com/s/files/1/0280/6457/9655/products/My_Time_at_Portia_Xb1_Cov.jpg?v=1592981794",
       "price": "$5.00",
-     
-      "product_id": 4545-91,
-      "short_text":"lorem ipsum",
-      "long_text":"Shoot enemies and gather amazing loot to upgrade and customize your character as you see fit.",
+
+      "product_id": 4545 - 91,
+      "short_text": "lorem ipsum",
+      "long_text": "Shoot enemies and gather amazing loot to upgrade and customize your character as you see fit.",
       "title": "My Time at Portia"
     },
     {
       "discount": "",
       "handle": "bless-online-win",
       "price": "$10.00",
-      "on_sale":true,
-      "prev_price":"$20.00",
+      "on_sale": true,
+      "prev_price": "$20.00",
       "img_src": "https://cdn.shopify.com/s/files/1/0280/6457/9655/products/BLESS_ONLINE_win_cov.jpg?v=1592984940",
-      "product_page":"https://www.amazon.in/b?ie=UTF8&node=21345254031",
-      "screenshots":[
+      "product_page": "https://www.amazon.in/b?ie=UTF8&node=21345254031",
+      "screenshots": [
         "assets/bless/9cd033c9851d402daca72283c90bb5dc.jpg",
         "assets/bless/51ac315aaaca441e881c69679f9b0bd3.jpg",
         "assets/bless/2750f121692e4532a1d160001a5f11b5.jpg",
@@ -37,38 +37,38 @@ var blockData = {
       "price": "$20.00",
       "product_id": 681155,
       //"clip":"assets/sample2.webm",
-      "screenshots":[
+      "screenshots": [
         "assets/atelier/0b73d0511d5f4f6191137d7811e024cb.jpg",
         "assets/atelier/78a2c94282434079b2da314c1010e4ce.jpg",
         "assets/atelier/1403771e2d8241b9ba972aada64777eb.jpg",
         "assets/atelier/cfc383aa99bf4340a282ce3bf94e60c5.jpg",
         "assets/atelier/d0da9c8817cf4a05b884f830e597805d.jpg"
       ],
-      "product_page":"https://www.amazon.in/b?ie=UTF8&node=21345254031",
+      "product_page": "https://www.amazon.in/b?ie=UTF8&node=21345254031",
       "title": "Atelier Lulua: The Scion of Arland - Digital Deluxe Edition"
     },
     {
       "discount": "",
       "handle": "ni-no-kuni-2-digital-princes-edition-win",
-      "product_page":"https://www.amazon.in/b?ie=UTF8&node=21345254031",
-      "clip":"assets/Ni no Kuni II Revenant Kingdom - Rmp4.webm",
-     "img_src": "https://cdn.shopify.com/s/files/1/0280/6457/9655/products/Ni_no_Kuni_II_win_prince_cov.png?v=1592984299",
+      "product_page": "https://www.amazon.in/b?ie=UTF8&node=21345254031",
+      "clip": "assets/Ni no Kuni II Revenant Kingdom - Rmp4.webm",
+      "img_src": "https://cdn.shopify.com/s/files/1/0280/6457/9655/products/Ni_no_Kuni_II_win_prince_cov.png?v=1592984299",
       "product_id": 289742,
       "price": "$10.00",
-      "on_sale":true,
-      "prev_price":"$20.00",
+      "on_sale": true,
+      "prev_price": "$20.00",
       "title": "Ni no Kuni II: Revenant Kingdom - Digital Prince's Edition"
     },
     {
       "discount": "",
-      "on_sale":true,
-      "prev_price":"$15.00",
+      "on_sale": true,
+      "prev_price": "$15.00",
       "handle": "atelier-lulua-the-scion-of-arland-digital-deluxe-edition-win",
-      "product_page":"https://www.amazon.in/b?ie=UTF8&node=21345254031",
+      "product_page": "https://www.amazon.in/b?ie=UTF8&node=21345254031",
       "img_src": "https://cdn.shopify.com/s/files/1/0280/6457/9655/products/Atelier_Lulua_The_Scion_of_Arland_ps4_win_ns_deluxe_cov_601d6f28-39b5-4f7d-8738-c085b3560765.jpg?v=1592984407",
       "product_id": 681153,
       "price": "$10.00",
-      "clip":"assets/sample2.webm",
+      "clip": "assets/sample2.webm",
       "title": "Atelier Lulua: The Scion of Arland - Digital Deluxe Edition"
     },
     {
@@ -77,8 +77,8 @@ var blockData = {
       "img_src": "https://cdn.shopify.com/s/files/1/0280/6457/9655/products/BLESS_ONLINE_win_cov.jpg?v=1592984940",
       "price": "$5.00",
       "product_id": 200506,
-      "clip":"assets/sample.mp4",
-      "product_page":"https://www.amazon.in/b?ie=UTF8&node=21345254031",
+      "clip": "assets/sample.mp4",
+      "product_page": "https://www.amazon.in/b?ie=UTF8&node=21345254031",
       "title": "BLESS ONLINE"
     }
   ],
@@ -89,9 +89,9 @@ var blockData = {
       "img_src": "https://cdn.shopify.com/s/files/1/0280/6457/9655/products/game_cover_688d87af2ef876214d649b588469b7af.jpg?v=1592985340",
       "price": "$5.00",
       "product_id": "VGSXB11397",
-      "product_page":"https://www.amazon.in/b?ie=UTF8&node=21345254031",
-      "short_text":"lorem ipsum",
-      "long_text":"Shoot enemies and gather amazing loot to upgrade and customize your character as you see fit.",
+      "product_page": "https://www.amazon.in/b?ie=UTF8&node=21345254031",
+      "short_text": "lorem ipsum",
+      "long_text": "Shoot enemies and gather amazing loot to upgrade and customize your character as you see fit.",
       "title": "Agents of Mayhem"
     },
     {
@@ -100,9 +100,9 @@ var blockData = {
       "img_src": "https://cdn.shopify.com/s/files/1/0280/6457/9655/products/Days-Gone-Digital-Deluxe-Edition-ps4cvr.jpg?v=1592981531",
       "price": "",
       "product_id": "VGSPS4318",
-      "short_text":"lorem ipsum",
-      "product_page":"https://www.amazon.in/b?ie=UTF8&node=21345254031",
-      "long_text":"Shoot enemies and gather amazing loot to upgrade and customize your character as you see fit.",
+      "short_text": "lorem ipsum",
+      "product_page": "https://www.amazon.in/b?ie=UTF8&node=21345254031",
+      "long_text": "Shoot enemies and gather amazing loot to upgrade and customize your character as you see fit.",
       "title": "Days Gone: Digital Deluxe Edition"
     },
     {
@@ -111,7 +111,7 @@ var blockData = {
       "img_src": "https://cdn.shopify.com/s/files/1/0280/6457/9655/products/Ace_Combat_7_PS4_Cov.png?v=1592981616",
       "price": "$10.00",
       "product_id": "VGSPS4-69",
-      "product_page":"https://www.amazon.in/b?ie=UTF8&node=21345254031",
+      "product_page": "https://www.amazon.in/b?ie=UTF8&node=21345254031",
       "title": "Ace Combat 7: Skies Unknown"
     },
     {
@@ -120,7 +120,7 @@ var blockData = {
       "img_src": "https://cdn.shopify.com/s/files/1/0280/6457/9655/products/Days_Gone_CE_PS4_Cov.jpg?v=1592981533",
       "price": "$5.00",
       "product_id": "VGSPS4-3.210",
-      "product_page":"https://www.amazon.in/b?ie=UTF8&node=21345254031",
+      "product_page": "https://www.amazon.in/b?ie=UTF8&node=21345254031",
       "title": "Days Gone: Collector’s Edition"
     },
     {
@@ -129,7 +129,7 @@ var blockData = {
       "img_src": "https://cdn.shopify.com/s/files/1/0280/6457/9655/products/game_cover_688d87af2ef876214d649b588469b7af.jpg?v=1592985340",
       "price": "$5.00",
       "product_id": "VGSXB1-13911",
-      "product_page":"https://www.amazon.in/b?ie=UTF8&node=21345254031",
+      "product_page": "https://www.amazon.in/b?ie=UTF8&node=21345254031",
       "title": "Agents of Mayhem"
     },
     {
@@ -138,7 +138,7 @@ var blockData = {
       "img_src": "https://cdn.shopify.com/s/files/1/0280/6457/9655/products/Days-Gone-Digital-Deluxe-Edition-ps4cvr.jpg?v=1592981531",
       "price": "",
       "product_id": "VGSPS4-3.112",
-      "product_page":"https://www.amazon.in/b?ie=UTF8&node=21345254031",
+      "product_page": "https://www.amazon.in/b?ie=UTF8&node=21345254031",
       "title": "Days Gone: Digital Deluxe Edition"
     },
     {
@@ -147,7 +147,7 @@ var blockData = {
       "img_src": "https://cdn.shopify.com/s/files/1/0280/6457/9655/products/Ace_Combat_7_PS4_Cov.png?v=1592981616",
       "price": "$10.00",
       "product_id": "VGSPS4-613",
-      "product_page":"https://www.amazon.in/b?ie=UTF8&node=21345254031",
+      "product_page": "https://www.amazon.in/b?ie=UTF8&node=21345254031",
       "title": "Ace Combat 7: Skies Unknown"
     },
     {
@@ -156,7 +156,7 @@ var blockData = {
       "img_src": "https://cdn.shopify.com/s/files/1/0280/6457/9655/products/Days_Gone_CE_PS4_Cov.jpg?v=1592981533",
       "price": "$5.00",
       "product_id": "VGSPS4-3.214",
-      "product_page":"https://www.amazon.in/b?ie=UTF8&node=21345254031",
+      "product_page": "https://www.amazon.in/b?ie=UTF8&node=21345254031",
       "title": "Days Gone: Collector’s Edition"
     },
     {
@@ -165,7 +165,7 @@ var blockData = {
       "img_src": "https://cdn.shopify.com/s/files/1/0280/6457/9655/products/game_cover_688d87af2ef876214d649b588469b7af.jpg?v=1592985340",
       "price": "$5.00",
       "product_id": "VGSXB1-13915",
-      "product_page":"https://www.amazon.in/b?ie=UTF8&node=21345254031",
+      "product_page": "https://www.amazon.in/b?ie=UTF8&node=21345254031",
       "title": "Agents of Mayhem"
     },
     {
@@ -174,7 +174,7 @@ var blockData = {
       "img_src": "https://cdn.shopify.com/s/files/1/0280/6457/9655/products/Days-Gone-Digital-Deluxe-Edition-ps4cvr.jpg?v=1592981531",
       "price": "",
       "product_id": "VGSPS4-3.116",
-      "product_page":"https://www.amazon.in/b?ie=UTF8&node=21345254031",
+      "product_page": "https://www.amazon.in/b?ie=UTF8&node=21345254031",
       "title": "Days Gone: Digital Deluxe Edition"
     },
     {
@@ -183,7 +183,7 @@ var blockData = {
       "img_src": "https://cdn.shopify.com/s/files/1/0280/6457/9655/products/Ace_Combat_7_PS4_Cov.png?v=1592981616",
       "price": "$10.00",
       "product_id": "VGSPS4-617",
-      "product_page":"https://www.amazon.in/b?ie=UTF8&node=21345254031",
+      "product_page": "https://www.amazon.in/b?ie=UTF8&node=21345254031",
       "title": "Ace Combat 7: Skies Unknown"
     },
     {
@@ -192,15 +192,15 @@ var blockData = {
       "img_src": "https://cdn.shopify.com/s/files/1/0280/6457/9655/products/Days_Gone_CE_PS4_Cov.jpg?v=1592981533",
       "price": "$5.00",
       "product_id": "VGSPS4-3.218",
-      "product_page":"https://www.amazon.in/b?ie=UTF8&node=21345254031",
+      "product_page": "https://www.amazon.in/b?ie=UTF8&node=21345254031",
       "title": "Days Gone: Collector’s Edition"
     }
   ],
   "Other Role-Playing Game": [
     {
       "discount": "",
-      "on_sale":true,
-      "prev_price":"$10.00",
+      "on_sale": true,
+      "prev_price": "$10.00",
       "handle": "my-time-at-portia-xb1",
       "img_src": "https://cdn.shopify.com/s/files/1/0280/6457/9655/products/My_Time_at_Portia_Xb1_Cov.jpg?v=1592981794",
       "screenshots": [
@@ -210,11 +210,11 @@ var blockData = {
         "https://s3.amazonaws.com/gameopedia_covers/screenshots/1431580/5742bbae7a1807aa2937436f35a0dc0c_full480.jpg"
       ],
       "price": "$5.00",
-      "product_id": 45459-19,
-      "short_text":"lorem ipsum",
-      "clip":"assets/My Time At Portia.webm",
-      "product_page":"https://www.amazon.in/b?ie=UTF8&node=21345254031",
-      "long_text":"Shoot enemies and gather amazing loot to upgrade and customize your character as you see fit.",
+      "product_id": 45459 - 19,
+      "short_text": "lorem ipsum",
+      "clip": "assets/My Time At Portia.webm",
+      "product_page": "https://www.amazon.in/b?ie=UTF8&node=21345254031",
+      "long_text": "Shoot enemies and gather amazing loot to upgrade and customize your character as you see fit.",
       "title": "My Time at Portia"
     },
     {
@@ -229,10 +229,10 @@ var blockData = {
       ],
       "price": "$10.00",
       "product_id": 28979920,
-      "short_text":"lorem ipsum",
-      "clip":"assets/Ni no Kuni II Revenant Kingdom - Rmp4.webm",
-      "product_page":"https://www.amazon.in/b?ie=UTF8&node=21345254031",
-      "long_text":"Shoot enemies and gather amazing loot to upgrade and customize your character as you see fit.",
+      "short_text": "lorem ipsum",
+      "clip": "assets/Ni no Kuni II Revenant Kingdom - Rmp4.webm",
+      "product_page": "https://www.amazon.in/b?ie=UTF8&node=21345254031",
+      "long_text": "Shoot enemies and gather amazing loot to upgrade and customize your character as you see fit.",
       "title": "Ni no Kuni II: Revenant Kingdom - Digital Prince's Edition"
     }
   ],
@@ -240,27 +240,27 @@ var blockData = {
     {
       "discount": "",
       "handle": "my-time-at-portia-xb1",
-      "clip":"assets/sample2.webm",
+      "clip": "assets/sample2.webm",
       "img_src": "https://cdn.shopify.com/s/files/1/0280/6457/9655/products/My_Time_at_Portia_Xb1_Cov.jpg?v=1592981794",
       "price": "$5.00",
       "product_id": 4545913399,
-      "short_text":"lorem ipsum",
-      "product_page":"https://www.amazon.in/b?ie=UTF8&node=21345254031",
-      "long_text":"Shoot enemies and gather amazing loot to upgrade and customize your character as you see fit.",
+      "short_text": "lorem ipsum",
+      "product_page": "https://www.amazon.in/b?ie=UTF8&node=21345254031",
+      "long_text": "Shoot enemies and gather amazing loot to upgrade and customize your character as you see fit.",
       "title": "My Time at Portia"
     },
     {
       "discount": "5%",
-      "on_sale":true,
-      "prev_price":"$10.00",
+      "on_sale": true,
+      "prev_price": "$10.00",
       "handle": "days-gone-collectors-edition-ps4",
       "img_src": "https://cdn.shopify.com/s/files/1/0280/6457/9655/products/Days_Gone_CE_PS4_Cov.jpg?v=1592981533",
       "price": "$5.00",
       "product_id": "VGSPS-99435210",
-      "short_text":"lorem ipsum",
+      "short_text": "lorem ipsum",
       "clip": "assets/Days Gone - Rmp4.webm",
-      "product_page":"https://www.amazon.in/b?ie=UTF8&node=21345254031",
-      "long_text":"Shoot enemies and gather amazing loot to upgrade and customize your character as you see fit.",
+      "product_page": "https://www.amazon.in/b?ie=UTF8&node=21345254031",
+      "long_text": "Shoot enemies and gather amazing loot to upgrade and customize your character as you see fit.",
       "title": "Days Gone"
     },
     {
@@ -269,91 +269,91 @@ var blockData = {
       "img_src": "https://cdn.shopify.com/s/files/1/0280/6457/9655/products/BLESS_ONLINE_win_cov.jpg?v=1592984940",
       "price": "$5.00",
       "product_id": 200500904,
-      "clip":"assets/sample2.webm",
-      "product_page":"https://www.amazon.in/b?ie=UTF8&node=21345254031",
-      "long_text":"Shoot enemies and gather amazing loot to upgrade and customize your character as you see fit.",
+      "clip": "assets/sample2.webm",
+      "product_page": "https://www.amazon.in/b?ie=UTF8&node=21345254031",
+      "long_text": "Shoot enemies and gather amazing loot to upgrade and customize your character as you see fit.",
       "title": "BLESS ONLINE"
     },
   ]
 }
 const cardConfig = {
   "template-1": {
-    container: { background:"white", titleAlignment: "left", titleColor: "black", titleSize: 14 },
-    card:{ height: 140, width: 266, margin: 15, extraWidth: 100, background: "white"}
+    container: { background: "white", titleAlignment: "left", titleColor: "black", titleSize: 14 },
+    card: { height: 140, width: 266, margin: 15, extraWidth: 100, background: "white" }
   },
   "template-2": {
-    container: { background:"white", titleAlignment: "left", titleColor: "black", titleSize: 14 },
-    card:{ height: 140, width: 120, margin: 15, extraWidth: 220}
+    container: { background: "white", titleAlignment: "left", titleColor: "black", titleSize: 14 },
+    card: { height: 140, width: 120, margin: 15, extraWidth: 220 }
   },
   "template-3": {
-    container: { background:"white", titleAlignment: "left", titleColor: "black", titleSize: 14 },
-    card:{ height: 358, width: 536, margin: 15, extraWidth: 100}
+    container: { background: "white", titleAlignment: "left", titleColor: "black", titleSize: 14 },
+    card: { height: 358, width: 536, margin: 15, extraWidth: 100 }
   },
   "template-4": {
-    container: { background:"white", titleAlignment: "left", titleColor: "black", titleSize: 14 },
-    card:{ height: 140, width: 266, margin: 15, extraWidth: 100, background: "white"}
+    container: { background: "white", titleAlignment: "left", titleColor: "black", titleSize: 14 },
+    card: { height: 140, width: 266, margin: 15, extraWidth: 100, background: "white" }
   },
 }
 
-const scrollHandler = (containerIndex,order,paginationIndex) => {
+const scrollHandler = (containerIndex, order, paginationIndex) => {
   let rcBlock = document.querySelector(`[data-container-index="${containerIndex}"]`);
   let availableWidht = window.screen.availWidth;
   let paginationBlock = document.querySelector(`#pagination-block${containerIndex}`);
-  let itagRight = document.querySelectorAll(".content-box")[containerIndex-1].querySelector(".fa-chevron-right");
-  let itagleft = document.querySelectorAll(".content-box")[containerIndex-1].querySelector(".fa-chevron-left");
-  let bulletIndex =  Math.ceil(rcBlock.scrollLeft/availableWidht);
-  if(order=="right") {
+  let itagRight = document.querySelectorAll(".content-box")[containerIndex - 1].querySelector(".fa-chevron-right");
+  let itagleft = document.querySelectorAll(".content-box")[containerIndex - 1].querySelector(".fa-chevron-left");
+  let bulletIndex = Math.ceil(rcBlock.scrollLeft / availableWidht);
+  if (order == "right") {
     rcBlock.scrollLeft -= availableWidht;
-  } else if(order=="left") {
+  } else if (order == "left") {
     rcBlock.scrollLeft += availableWidht;
   } else if (order == "move" && paginationBlock.querySelector("i.active")) {
     paginationBlock.querySelector("i.active").classList.remove("active");
     paginationBlock.querySelectorAll("i")[bulletIndex].classList.add("active");
-  } else if(order=="click") {
-    rcBlock.scrollLeft = availableWidht*paginationIndex;
+  } else if (order == "click") {
+    rcBlock.scrollLeft = availableWidht * paginationIndex;
   }
-  if(paginationBlock.childElementCount == bulletIndex+1) {
-    itagRight.style.color="grey";
-    itagleft.style.color="black";
-  } else if(rcBlock.scrollLeft == 0) {
-    itagleft.style.color="grey";
-    itagRight.style.color="black";
+  if (paginationBlock.childElementCount == bulletIndex + 1) {
+    itagRight.style.color = "grey";
+    itagleft.style.color = "black";
+  } else if (rcBlock.scrollLeft == 0) {
+    itagleft.style.color = "grey";
+    itagRight.style.color = "black";
   } else {
-    itagRight.style.color="black";
-    itagleft.style.color="black" ;
+    itagRight.style.color = "black";
+    itagleft.style.color = "black";
   }
 }
 
 const paginationHandler = () => {
   let availableWidht = window.screen.availWidth;
-  document.querySelectorAll(".content-box").forEach((block,index) => {
+  document.querySelectorAll(".content-box").forEach((block, index) => {
     let template = block.getAttribute("data-template");
     let noOfCards = block.getAttribute("data-no-of-cards");
     let requiredWidth = (cardConfig[template].card.width * noOfCards) + cardConfig[template].card.extraWidth;
-    let noOfSildes = Math.ceil((requiredWidth/availableWidht));
+    let noOfSildes = Math.ceil((requiredWidth / availableWidht));
     let bullet = "";
-    let itagRight =  block.querySelector(".fa-chevron-right");
+    let itagRight = block.querySelector(".fa-chevron-right");
     let itagleft = block.querySelector(".fa-chevron-left");
-    if(noOfSildes > 1) {
-      for(let i=0 ; i < noOfSildes; i++) {
-        bullet = bullet + `<i class="fa fa-circle ${i==0?"active":""}" aria-hidden="true" onclick="scrollHandler(${index+1},'click',${i})"></i>`
+    if (noOfSildes > 1) {
+      for (let i = 0; i < noOfSildes; i++) {
+        bullet = bullet + `<i class="fa fa-circle ${i == 0 ? "active" : ""}" aria-hidden="true" onclick="scrollHandler(${index + 1},'click',${i})"></i>`
       }
     }
-    itagleft.style.color="grey";
-    if(noOfSildes == 1) {
-      itagRight.style.display="none";
-      itagleft.style.display="none";
+    itagleft.style.color = "grey";
+    if (noOfSildes == 1) {
+      itagRight.style.display = "none";
+      itagleft.style.display = "none";
     }
-    document.getElementById(`pagination-block${index+1}`).innerHTML = bullet;
+    document.getElementById(`pagination-block${index + 1}`).innerHTML = bullet;
   });
 }
 
 const addToCartHandler = (productId, containerIndex, order) => {
   let rcBlock = document.querySelector(`[data-container-index="${containerIndex}"]`);
   let selectedProduct = "";
-  if(order=="single") {
+  if (order == "single") {
     selectedProduct = productId;
-  } else if(order=="multi") {
+  } else if (order == "multi") {
     selectedProduct = [];
     rcBlock.querySelectorAll("input:checked").forEach(element => {
       selectedProduct.push(element.value)
@@ -373,6 +373,21 @@ window.onload = () => {
     "Other Role-Playing Game": "template-3",
     "Frequently bought together": "template-4"
   }
+  // fetch('url', {
+  //   headers: {
+  //     'Content-Type': 'application/json',
+  //   }
+  // })
+  // .then(response => response.json())
+  // .then(data => {
+  //   for (var recBlock in data) {
+  //     index++;
+  //     let template = templateMapping[recBlock] ? templateMapping[recBlock] : "template-1";
+  //     let noOfCards = data[recBlock].length;
+  //     let block = getRcBlocks(data[recBlock], index, recBlock, template, noOfCards);
+  //     gameopediaRecommendationBlock.innerHTML += block;
+  //   }
+  // });
   for (var recBlock in blockData) {
     index++;
     let template = templateMapping[recBlock] ? templateMapping[recBlock] : "template-1";
@@ -386,38 +401,38 @@ window.onload = () => {
 window.onresize = paginationHandler;
 var slideIndex = 0;
 
-const playVideo = (video,template,card,cardIndex,order) => {
-  let parentElement = card.parentNode; 
-    if(order=="screenshots") {
-      video.style.width = `${cardConfig[template].card.width}px`;
-      video.querySelectorAll(".box-art").forEach(element => {
-        element.style["min-width"] = `${cardConfig[template].card.width}px`;
-        element.style["max-width"] = `${cardConfig[template].card.width}px`;
-      });
-      showSlides(video,cardConfig[template].card.width);
-      parentElement.style.width = `${cardConfig[template].card.width}px`;
-      parentElement.querySelector(".card-footer").style.left = `${cardConfig[template].card.width-81}px`;
-    } else if(template == "template-1") {
-      video.style.width = `${cardConfig[template].card.width}px`;
-      parentElement.style.width = `${cardConfig[template].card.width}px`;
-      parentElement.querySelector(".card-footer").style.left = `${cardConfig[template].card.width-81}px`;
-    } else if(template == "template-4" && cardIndex!=0) {
-      video.style.width = `${cardConfig[template].card.width}px`;
-      parentElement.style.width = `${cardConfig[template].card.width}px`;
-      parentElement.querySelector(".card-footer").style.left = `${cardConfig[template].card.width-65}px`;
-    } else if(template == "template-3" && video.paused == false) {
-      video.style.transform = "scale(1.2)";
-      video.style["-webkit-transform"] = "scale(1.2)";
-      video.style["--ms-transform"] = "scale(1.2)";
-    }
-    if(video.readyState == 4 && template == "template-4" && cardIndex!=0) {
-      video.play();
-    } else if( video.readyState == 4 && template!="template-4" && order != "screenshots") {
-      video.play();
-    }
+const playVideo = (video, template, card, cardIndex, order) => {
+  let parentElement = card.parentNode;
+  if (order == "screenshots") {
+    video.style.width = `${cardConfig[template].card.width}px`;
+    video.querySelectorAll(".box-art").forEach(element => {
+      element.style["min-width"] = `${cardConfig[template].card.width}px`;
+      element.style["max-width"] = `${cardConfig[template].card.width}px`;
+    });
+    showSlides(video, cardConfig[template].card.width);
+    parentElement.style.width = `${cardConfig[template].card.width}px`;
+    parentElement.querySelector(".card-footer").style.left = `${cardConfig[template].card.width - 81}px`;
+  } else if (template == "template-1") {
+    video.style.width = `${cardConfig[template].card.width}px`;
+    parentElement.style.width = `${cardConfig[template].card.width}px`;
+    parentElement.querySelector(".card-footer").style.left = `${cardConfig[template].card.width - 81}px`;
+  } else if (template == "template-4" && cardIndex != 0) {
+    video.style.width = `${cardConfig[template].card.width}px`;
+    parentElement.style.width = `${cardConfig[template].card.width}px`;
+    parentElement.querySelector(".card-footer").style.left = `${cardConfig[template].card.width - 65}px`;
+  } else if (template == "template-3" && video.paused == false) {
+    video.style.transform = "scale(1.2)";
+    video.style["-webkit-transform"] = "scale(1.2)";
+    video.style["--ms-transform"] = "scale(1.2)";
+  }
+  if (video.readyState == 4 && template == "template-4" && cardIndex != 0) {
+    video.play();
+  } else if (video.readyState == 4 && template != "template-4" && order != "screenshots") {
+    video.play();
+  }
 }
 
-const showSlides = (element,width) => {
+const showSlides = (element, width) => {
   clearInterval(timeout);
   slideIndex = 0;
   timeout = setInterval(() => {
@@ -427,45 +442,45 @@ const showSlides = (element,width) => {
     }
     slideIndex++;
     if (slideIndex >= slides.length) {
-      slides[slideIndex-1].style.left = 0;
+      slides[slideIndex - 1].style.left = 0;
       slideIndex = 0
     }
     slides[slideIndex].style.left = `${-1 * width * (slideIndex)}px`;
-   }, 2000);
+  }, 2000);
 }
 
-const pauseVideo = (video,template,card,cardIndex,order) => {
+const pauseVideo = (video, template, card, cardIndex, order) => {
   clearInterval(timeout)
-  if(template == "template-1") {
-    video.style.width = `${(cardConfig[template].card.width/2)-13}px`;
-    if(video.querySelector(".box-art")) {
+  if (template == "template-1") {
+    video.style.width = `${(cardConfig[template].card.width / 2) - 13}px`;
+    if (video.querySelector(".box-art")) {
       video.querySelectorAll(".box-art").forEach(element => {
-        element.style.width = `${(cardConfig[template].card.width/2)-10}px`;
-        element.style["min-width"] = `${(cardConfig[template].card.width/2)-10}px`;
+        element.style.width = `${(cardConfig[template].card.width / 2) - 10}px`;
+        element.style["min-width"] = `${(cardConfig[template].card.width / 2) - 10}px`;
         element.style.left = 0;
       });
     } else {
-      video.load ? video.load() : "" ;
+      video.load ? video.load() : "";
     }
-    card.querySelector(".card-body").style.width= `${(cardConfig[template].card.width/2)-13}px`;
-    card.querySelector(".card-footer").style.left=`${(cardConfig[template].card.width/2)-10}px`;
-  } else if(template == "template-3") {
+    card.querySelector(".card-body").style.width = `${(cardConfig[template].card.width / 2) - 13}px`;
+    card.querySelector(".card-footer").style.left = `${(cardConfig[template].card.width / 2) - 10}px`;
+  } else if (template == "template-3") {
     video.pause();
-  } else if(template == "template-4" && cardIndex != 0) {
+  } else if (template == "template-4" && cardIndex != 0) {
     video.load();
-    video.style.width = `${(cardConfig[template].card.width/2)-13}px`;
-    card.querySelector(".card-body").style.width=`${(cardConfig[template].card.width/2)-13}px`;
-    card.querySelector(".card-footer").style.left=`${(cardConfig[template].card.width/2)+4}px`;
+    video.style.width = `${(cardConfig[template].card.width / 2) - 13}px`;
+    card.querySelector(".card-body").style.width = `${(cardConfig[template].card.width / 2) - 13}px`;
+    card.querySelector(".card-footer").style.left = `${(cardConfig[template].card.width / 2) + 4}px`;
   }
 }
 
 const screenShotsHandler = (selectedUrl, videoElement, order, element) => {
-  if(order=="image") {
+  if (order == "image") {
     videoElement.poster = selectedUrl;
-    videoElement.src="";
+    videoElement.src = "";
     videoElement.style.transform = "scale(1.0)";
-  } else if(order=="video") {
-    videoElement.src = selectedUrl; 
+  } else if (order == "video") {
+    videoElement.src = selectedUrl;
     videoElement.style.transform = "scale(1.2)";
     videoElement.style["-webkit-transform"] = "scale(1.2)";
     videoElement.style["--ms-transform"] = "scale(1.2)";
@@ -473,17 +488,17 @@ const screenShotsHandler = (selectedUrl, videoElement, order, element) => {
   }
 }
 
-const screenShotsScrollHandler = (element,order) => {
+const screenShotsScrollHandler = (element, order) => {
   let screenshots = element.querySelector(".screenshots");
   let scrollLeft = screenshots.scrollLeft;
   let itagRight = element.querySelector(".right-arrow");
   let itagleft = element.querySelector(".left-arrow");
-  if(order == "right") {
-    screenshots.scrollLeft+= 83;
-  } else if(order == "left") {
-    screenshots.scrollLeft-= 83;
-  } else if(order == "move") {
-    if(scrollLeft == 0) {
+  if (order == "right") {
+    screenshots.scrollLeft += 83;
+  } else if (order == "left") {
+    screenshots.scrollLeft -= 83;
+  } else if (order == "move") {
+    if (scrollLeft == 0) {
       itagleft.style.color = "grey";
       itagRight.style.color = "white";
     } else {
@@ -496,46 +511,46 @@ const screenShotsScrollHandler = (element,order) => {
 var timeout;
 
 const moveHandler = (element) => {
-  element.querySelector(".card-footer").setAttribute("data-status","up")
-  element.querySelector("canvas").style.opacity=1
+  element.querySelector(".card-footer").setAttribute("data-status", "up")
+  element.querySelector("canvas").style.opacity = 1
   clearTimeout(timeout);
   timeout = setTimeout(() => {
-    if(!element.querySelector("video").paused){
-      element.querySelector(".card-footer").setAttribute("data-status","down")
-      element.querySelector("canvas").style.opacity=0
+    if (!element.querySelector("video").paused) {
+      element.querySelector(".card-footer").setAttribute("data-status", "down")
+      element.querySelector("canvas").style.opacity = 0
     }
   }, 3000);
 }
 
 const getRcBlocks = (recData, index, recBlock, template, noOfCards) => {
   let cards = ""
-  if(template == "template-1") {
-    recData.forEach((record,cardIndex) => {
-      let screenShots = `<div class="box-art" style="background-image: url(${record.img_src ? record.img_src : "assets/no-image.jpeg"});position:relative;min-width:${(cardConfig[template].card.width/2)-10}px;max-width:${(cardConfig[template].card.width/2-10)}px;height:${cardConfig[template].card.height}px;left:0"></div>`;
-      if(record.screenshots) {
-        record.screenshots.forEach((element,sIndex) => {
-          screenShots+=`<div class="box-art" style="background-image: url(${element});position:relative;min-width:${(cardConfig[template].card.width/2)-10}px;max-width:${(cardConfig[template].card.width/2)-10}px;height:${cardConfig[template].card.height}px;left:0"></div>`
+  if (template == "template-1") {
+    recData.forEach((record, cardIndex) => {
+      let screenShots = `<div class="box-art" style="background-image: url(${record.img_src ? record.img_src : "assets/no-image.jpeg"});position:relative;min-width:${(cardConfig[template].card.width / 2) - 10}px;max-width:${(cardConfig[template].card.width / 2 - 10)}px;height:${cardConfig[template].card.height}px;left:0"></div>`;
+      if (record.screenshots) {
+        record.screenshots.forEach((element, sIndex) => {
+          screenShots += `<div class="box-art" style="background-image: url(${element});position:relative;min-width:${(cardConfig[template].card.width / 2) - 10}px;max-width:${(cardConfig[template].card.width / 2) - 10}px;height:${cardConfig[template].card.height}px;left:0"></div>`
         });
       }
-      cards+= 
-      `<div class="card" style="min-width:${cardConfig[template].card.width}px;max-width:${cardConfig[template].card.width}px;height:${cardConfig[template].card.height}px;background:${cardConfig[template].card.background}" onmouseleave= "pauseVideo(bgvidContainer${index}Card${cardIndex},'${template}',this)">
+      cards +=
+        `<div class="card" style="min-width:${cardConfig[template].card.width}px;max-width:${cardConfig[template].card.width}px;height:${cardConfig[template].card.height}px;background:${cardConfig[template].card.background}" onmouseleave= "pauseVideo(bgvidContainer${index}Card${cardIndex},'${template}',this)">
         <div class="card-body">
-        ${record.on_sale ? '<div class="on-sale">SALE</div>':""}
-          ${record.clip ? 
-            `<video 
+        ${record.on_sale ? '<div class="on-sale">SALE</div>' : ""}
+          ${record.clip ?
+          `<video 
               poster="${record.img_src ? record.img_src : "assets/no-image.jpeg"}" 
-              src="${record.clip }" 
+              src="${record.clip}" 
               id="bgvidContainer${index}Card${cardIndex}"
               playsinline muted loop
               onerror="this.onerror=null;this.src='assets/no-image.jpeg';"
               onmouseover="playVideo(bgvidContainer${index}Card${cardIndex},'${template}',this)">
-            </video>` 
-          :`
+            </video>`
+          : `
           <div class="slideshow-container" id="bgvidContainer${index}Card${cardIndex}" onmouseover="playVideo(bgvidContainer${index}Card${cardIndex},'${template}',this,${cardIndex},'screenshots')">
             ${screenShots}
           </div>`
-          }
-          <div class="card-footer" style="left:${(cardConfig[template].card.width/2)-7}px">
+        }
+          <div class="card-footer" style="left:${(cardConfig[template].card.width / 2) - 7}px">
             <div class="price">
               ${record.prev_price ? `<span class="prev-price">${record.prev_price}</span>` : ""}
               ${record.price}
@@ -550,14 +565,14 @@ const getRcBlocks = (recData, index, recBlock, template, noOfCards) => {
         </div>
       </div>`
     });
-  } else if(template == "template-2") {
+  } else if (template == "template-2") {
     recData.forEach((record, cardIndex) => {
-      cards += `<div class="card-wrapper">
+      cards += `<div class="card-wrapper" style="width:${cardConfig[template].card.width}px">
       <div class="card-body" style="height:${cardConfig[template].card.height}px;align-item:center">
         <div class="card-footer">
           <div class="long-text" style="color:white;text-align:center;padding:5px">${record.long_text ? record.long_text : ""}</div>
           <div style="display:flex;justify-content: center;width:${cardConfig[template].card.width}px">
-          <div class="price" style="color:#F8E71C">${record.price ? record.price :""}</div>
+          <div class="price" style="color:#F8E71C">${record.price ? record.price : ""}</div>
           <i class="fa fa-shopping-cart" aria-hidden="true"  onclick="addToCartHandler('${record.product_id}',${cardIndex},'single')"></i>
           </div>
         </div>
@@ -569,15 +584,15 @@ const getRcBlocks = (recData, index, recBlock, template, noOfCards) => {
       <div class="short-text">${record.short_text ? record.short_text : ""}</div>
       </div>`
     });
-  } else if(template == "template-3") {
+  } else if (template == "template-3") {
     recData.forEach((record, cardIndex) => {
       let screenshots = `<div class="box-art" style="background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgb(143, 139, 136)), url(${record.img_src});color:white;display:flex;justify-content:center;align-item:center;cursor:pointer" onclick="screenShotsHandler('${record.clip}',bgvidContainer${index}Card${cardIndex},'video',this)"><i class="fa fa-play"></i></div>`;
-      if(record.screenshots) {
+      if (record.screenshots) {
         record.screenshots.forEach(element => {
-          screenshots+= `<div class="box-art" style="background-image: url(${element});" onclick="screenShotsHandler('${element}',bgvidContainer${index}Card${cardIndex},'image',this)"></div>`
+          screenshots += `<div class="box-art" style="background-image: url(${element});" onclick="screenShotsHandler('${element}',bgvidContainer${index}Card${cardIndex},'image',this)"></div>`
         });
       } else {
-        screenshots=""
+        screenshots = ""
       }
       cards += `<div class="card-wrapper" onmouseover="playVideo(bgvidContainer${index}Card${cardIndex},'${template}',this)" onmouseleave="pauseVideo(bgvidContainer${index}Card${cardIndex},'${template}'),this" onmousemove="moveHandler(this)" >
       <canvas class="canvas"></canvas>
@@ -588,9 +603,9 @@ const getRcBlocks = (recData, index, recBlock, template, noOfCards) => {
           <div class="short-text">${record.short_text ? record.short_text : ""}</div>
           <div class="long-text">${record.long_text ? record.long_text : ""}</div>
         </div>
-        <div class="card-footer" data-status="up" style="width:${cardConfig[template].card.width-60}px" onmouseover="()=>this.style.bottom=0">
+        <div class="card-footer" data-status="up" style="width:${cardConfig[template].card.width - 60}px" onmouseover="()=>this.style.bottom=0">
           <div class="add-to-cart"><i class="fa fa-shopping-cart" aria-hidden="true" style="margin-right:5px;font-size:17px"  onclick="addToCartHandler('${record.product_id}',${cardIndex},'single')"></i></div> 
-          ${record.price ? `<div class="right-section">${record.on_sale ?"<div class='on-sale'>ON SALE</div>" : ""}<div class="price">${record.price}</div></div>`: ""}
+          ${record.price ? `<div class="right-section">${record.on_sale ? "<div class='on-sale'>ON SALE</div>" : ""}<div class="price">${record.price}</div></div>` : ""}
           ${screenshots != "" ? `<div class="screenshots-wrapper" id="screenShotsContainer${index}Card${cardIndex}">
           <span class="left-arrow" onclick="screenShotsScrollHandler(screenShotsContainer${index}Card${cardIndex},'left')">&#10148;</span>          
           <div class="screenshots" onscroll="screenShotsScrollHandler(screenShotsContainer${index}Card${cardIndex},'move')">
@@ -605,20 +620,20 @@ const getRcBlocks = (recData, index, recBlock, template, noOfCards) => {
       </div>
       </div>`
     });
-  } else if(template == "template-4") {
+  } else if (template == "template-4") {
     recData.forEach((record, cardIndex) => {
-    cards+= `<div class="card"  onmouseleave="pauseVideo(bgvidContainer${index}Card${cardIndex},'${template}',this,${cardIndex})" style="min-width:${cardConfig[template].card.width}px;max-width:${cardConfig[template].card.width}px;height:${cardConfig[template].card.height}px;background:${cardConfig[template].card.background}">
+      cards += `<div class="card"  onmouseleave="pauseVideo(bgvidContainer${index}Card${cardIndex},'${template}',this,${cardIndex})" style="min-width:${cardConfig[template].card.width}px;max-width:${cardConfig[template].card.width}px;height:${cardConfig[template].card.height}px;background:${cardConfig[template].card.background}">
     <div class="card-body"> 
-       ${record.on_sale ? '<div class="on-sale">SALE</div>':""}  
+       ${record.on_sale ? '<div class="on-sale">SALE</div>' : ""}  
         <video poster="${record.img_src}" src="${record.clip}" id="bgvidContainer${index}Card${cardIndex}" playsinline muted loop  onmouseover="playVideo(bgvidContainer${index}Card${cardIndex},'${template}',this,${cardIndex})"></video> 
-        <div class="card-footer" style="left:${cardIndex!=0 ? (cardConfig[template].card.width/2)+5 : (cardConfig[template].card.width/2)-7}px">
+        <div class="card-footer" style="left:${cardIndex != 0 ? (cardConfig[template].card.width / 2) + 5 : (cardConfig[template].card.width / 2) - 7}px">
          ${ cardIndex != 0 ? `<label class="checkbox-label">
               <input type="checkbox" checked value='${record.product_id}'>
               <span class="checkbox-custom rectangular"></span>
           </label>` : ""}
           <div class="price">
-            ${record.prev_price?`<span class="prev-price">${record.prev_price}</span>`:""}
-            ${record.price ? record.price :""}
+            ${record.prev_price ? `<span class="prev-price">${record.prev_price}</span>` : ""}
+            ${record.price ? record.price : ""}
           </div>
         </div>
       </div>
@@ -630,7 +645,7 @@ const getRcBlocks = (recData, index, recBlock, template, noOfCards) => {
     </div>
     ${cardIndex == 0 ? '<div style="display:flex;align-items:center;font-weight:bold;font-size:27px">+</div>' : ""}`
     });
-    cards+=`<div class="add-to-cart" onclick="addToCartHandler(null,${index},'multi')">ADD TO CART</div>`
+    cards += `<div class="add-to-cart" onclick="addToCartHandler(null,${index},'multi')">ADD TO CART</div>`
   }
   return (
     `<div class="content-box ${template}" data-template="${template}" data-no-of-cards="${noOfCards}" style="background:${cardConfig[template].container.background}">
